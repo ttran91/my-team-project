@@ -1,0 +1,71 @@
+package com.springboot.backend.dto;
+
+import java.util.List;
+
+public class CustomerDTO {
+	private long id;
+	private String CustomerName;
+	private String CustomerNumber;
+	private String CustomerEmail;
+	private Double CustomerBalance;
+	private Integer numOfOrders;
+	
+	List<OrderDTO> order;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getCustomerName() {
+		return CustomerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		CustomerName = customerName;
+	}
+
+	public String getCustomerNumber() {
+		return CustomerNumber;
+	}
+
+	public void setCustomerNumber(String customerNumber) {
+		CustomerNumber = customerNumber;
+	}
+
+	public String getCustomerEmail() {
+		return CustomerEmail;
+	}
+
+	public void setCustomerEmail(String customerEmail) {
+		CustomerEmail = customerEmail;
+	}
+
+	public Double getCustomerBalance() {
+		return CustomerBalance;
+	}
+
+	public void setCustomerBalance(Double customerBalance) {
+		CustomerBalance = customerBalance;
+	}
+
+	public Integer getNumOfOrders() {
+		return numOfOrders;
+	}
+
+	public void setNumOfOrders(Integer numOfOrders) {
+		this.numOfOrders = numOfOrders;
+	}
+
+	public List<OrderDTO> getOrder() {
+		return order;
+	}
+
+	public void setOrder(List<OrderDTO> order) {
+		this.order = order;
+	}
+	
+}

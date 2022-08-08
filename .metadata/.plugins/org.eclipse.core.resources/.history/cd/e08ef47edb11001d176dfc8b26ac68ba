@@ -1,0 +1,22 @@
+package com.springboot.backend.dto;
+
+public class FoodDTO {
+	private Long id;
+	private String name;
+	private vid;
+	private vemail;
+}
+
+/*
+public class ProductDTO {
+	private Long id;
+	private String name;
+	private Double price;
+	private String cname;
+	private Integer cpref;
+	private String vname;
+	private Long vid;
+	private String vcity;
+	private Long cid;
+}
+*/
