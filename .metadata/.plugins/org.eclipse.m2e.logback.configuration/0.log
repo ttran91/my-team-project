@@ -6444,3 +6444,14 @@ org.eclipse.core.runtime.CoreException: Launch configuration MySpringBootMicrose
 2022-08-08 15:07:55,585 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-08-08 15:07:55,585 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-08-08 15:07:55,585 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1000075583\Documents\project\MyBackEndProject\src\test\resources
+2022-08-08 15:12:35,322 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-08-08 15:12:38,676 [Worker-5: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:myspringbootapp:0.0.1-SNAPSHOT @ C:\Users\1000075583\Documents\project\MyBackEndProject\pom.xml.
+2022-08-08 15:12:38,893 [Worker-5: Updating Maven Dependencies] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.jboss.logging:jboss-logging:jar:3.4.3.Final is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2022-08-08 15:12:40,352 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.jboss.logging:jboss-logging:jar:3.4.3.Final is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2022-08-08 15:12:41,040 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-08 15:12:41,040 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-08-08 15:12:41,044 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-08-08 15:12:41,097 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-08 15:12:41,100 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-08 15:12:41,100 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-08-08 15:12:41,100 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\1000075583\Documents\project\MyBackEndProject\src\test\resources
