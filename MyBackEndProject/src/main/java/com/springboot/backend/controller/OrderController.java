@@ -34,6 +34,14 @@ public class OrderController {
 	
 	
 	
+	
+	@PostMapping("/order")
+	public Order postOrder(@RequestBody Order order) {
+		return orderRepository.save(order);
+	}
+	
+	
+	
 	@PostMapping("/order/{cid}/{vid}")
 	public Order postOrder(@RequestBody Order order, 
 						   @PathVariable("cid") Long cid,

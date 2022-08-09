@@ -1,1 +1,36 @@
-<p>order-add works!</p>
+<form (submit)="onFormSubmit()" [formGroup]="orderForm">
+    <label>Enter Customer Name: </label>
+    <input type="text" name="cName" formControlcName="cName">
+    <span *ngIf="orderForm.controls['cName'].invalid
+          && orderForm.controls['cName'].touched">
+      <span *ngIf="orderForm.controls['cName'].errors['required']"> Customer Name is Required</span>
+      <span *ngIf="orderForm.controls['cName'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
+    </span>
+    <br /><br />
+    <label> Order Status: </label>
+    <Select>
+           <option value="RECIEVED">ADMIN</option>
+            <option value="IN PROCESS">USER</option>
+            <option value="ORDER COMPLETE">USER</option>
+    </Select>
+    <br /><br />
+    <label>Enter Order Cost: </label>
+    <input type="text" cName="cost" formControlcName="cost">
+    <span *ngIf="orderForm.controls[''].invalid
+    && employeeForm.controls['cost'].touched">
+      <span *ngIf="employeeForm.controls['cost'].errors['required']"> cost is Required</span>
+      <span *ngIf="employeeForm.controls['cost'].errors['minlength']"> Minlength is 2</span>
+      <span *ngIf="employeeForm.controls['cost'].errors['maxlength']"> Max Length is 10</span>
+      <span *ngIf="employeeForm.controls['cost'].errors['pattern']"> Pattern allowed: [0-9 ]+</span>
+    </span>
+    <br /><br />
+    <label>Enter Customer <Phone id=""></Phone>: </label>
+    <input type="text" name="phone" formControlName="phone">
+    <span *ngIf="employeeForm.controls['phone'].invalid
+          && employeeForm.controls['phone'].touched">
+      <span *ngIf="employeeForm.controls['phone'].errors['required']"> phone is Required</span>
+      <span *ngIf="employeeForm.controls['phone'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
+    </span>
+    <br /><br />
+    <input type="submit" value="Add Order" [disabled]="!orderForm.valid">
+  </form>

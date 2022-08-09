@@ -10,6 +10,8 @@ import { OrderComponent } from './components/order/order/order.component';
 import { OrderAddComponent } from './components/order/order-add/order-add.component';
 import { OrderListComponent } from './components/order/order-list/order-list.component';
 import { OrderStatComponent } from './components/order/order-stat/order-stat.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from'@angular/common/http';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { OrderStatComponent } from './components/order/order-stat/order-stat.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
