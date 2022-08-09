@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { ModelComponent } from './model/model.component';
 import { VendorComponent } from './components/vendor/vendor.component';
-import { OrderComponent } from './components/order/order.component';
+import { OrderComponent } from './components/order//order/order.component';
 import { OrderAddComponent } from './components/order/order-add/order-add';
 import { OrderListComponent } from './components/order/order-list/order-list';
 import { OrderStatComponent } from './components/order/order-stat/order-stat';
@@ -22,6 +22,7 @@ import { OrderStatComponent } from './components/order/order-stat/order-stat';
     OrderAddComponent,
     OrderListComponent,
     OrderStatComponent
+
   ],
   imports: [
     BrowserModule,
