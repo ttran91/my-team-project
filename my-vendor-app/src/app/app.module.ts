@@ -9,6 +9,9 @@ import { ModelComponent } from './model/model.component';
 import { ServiceComponent } from './service/service.component';
 import { VendorComponent } from './components/vendor/vendor.component';
 import { OrderComponent } from './components/order/order.component';
+import { OrderAddComponent } from './order/order-add/order-add.component';
+import { OrderListComponent } from './order/order-list/order-list.component';
+import { OrderStatComponent } from './order/order-stat/order-stat.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { OrderComponent } from './components/order/order.component';
     ModelComponent,
     ServiceComponent,
     VendorComponent,
-    OrderComponent
+    OrderComponent,
+    OrderAddComponent,
+    OrderListComponent,
+    OrderStatComponent
   ],
   imports: [
     BrowserModule,
