@@ -1,0 +1,28 @@
+package com.springboot.backend.service;
+
+import org.springframework.stereotype.Service;
+
+import com.springboot.backend.dto.CustomerDto;
+import com.springboot.backend.dto.OrderDto;
+import com.springboot.backend.repository.CustomerRepository;
+
+@Service
+public class MyPaymentService {
+
+    private CustomerRepository customerRepository;
+
+
+//    public CustomerDto debit(final CustomerDto customerDto){
+//        double balance = customerDto.getCustomerBalance();
+//        OrderDto oDto = new OrderDto();
+//        oDto.setAmount(requestDTO.getAmount());
+//        oDto.setUserId(requestDTO.getUserId());
+//        oDto.setOrderId(requestDTO.getOrderId());
+//        if(balance >= requestDTO.getAmount()){
+//            responseDTO.setStatus(PaymentStatus.PAYMENT_APPROVED);
+//            this.userBalanceMap.put(requestDTO.getUserId(), balance - requestDTO.getAmount());
+//        }
+//        return responseDTO;
+//   }
+  
+}

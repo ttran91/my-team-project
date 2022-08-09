@@ -1,0 +1,6 @@
+package com.springboot.backend.enums;
+
+public enum AccountType {
+	VENDOR, CUSTOMER;
+
+}

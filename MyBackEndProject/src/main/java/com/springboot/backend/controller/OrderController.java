@@ -83,6 +83,14 @@ public class OrderController {
 			dto.setOrderStatus(o.getOrderStatus());
 			dto.setOrderCost(o.getOrderCost());
 			dto.setCid(o.getCustomer().getId());
+			dto.setcName(o.getCustomer().getCustomerName());
+			dto.setcPhone(o.getCustomer().getCustomerPhone());
+			dto.setcEmail(o.getCustomer().getCustomerEmail());
+			dto.setVid(o.getVendor().getId());
+			dto.setvName(o.getVendor().getName());
+			dto.setvPhone(o.getVendor().getPhoneNumber());
+			dto.setvEmail(o.getVendor().getEmail());
+			
 			dto.setVid(o.getVendor().getId());
 			listDto.add(dto);
 			
@@ -91,6 +99,7 @@ public class OrderController {
 		return listDto;
 		
 	}
+	
 		
 
 	@GetMapping("/order/customer/{cid}")
