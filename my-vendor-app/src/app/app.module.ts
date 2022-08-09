@@ -16,7 +16,6 @@ import { OrderStatComponent } from './components/order/order-stat/order-stat.com
 @NgModule({
   declarations: [
     AppComponent,
-  
     AuthComponent,
     ModelComponent,
     VendorComponent,
