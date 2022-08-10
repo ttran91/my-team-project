@@ -10,7 +10,7 @@ import { OrderComponent } from './components/order/order/order.component';
 import { OrderAddComponent } from './components/order/order-add/order-add.component';
 import { OrderListComponent } from './components/order/order-list/order-list.component';
 import { OrderStatComponent } from './components/order/order-stat/order-stat.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from'@angular/common/http';
 
 
@@ -29,6 +29,7 @@ import {HttpClientModule} from'@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],

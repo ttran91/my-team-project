@@ -1,14 +1,8 @@
-export class Order{
+export class OrderForm{
+
     id?: number;
+    cName: string; 
     orderStatus: string;
     orderCost: number;
-    cid?: number;
-    cName: string;
-    cPhone: number;
-    cEmail?: string;
-    vid?: number;
-    vName?: string;
-    vPhone?: number
-    vEmail?: string;
-
+    cPnumber: number;
 }
