@@ -16,7 +16,7 @@
     <input type="text" name="orderStatus" formControlName="orderStatus">
     <span *ngIf="orderFormForm.controls['orderStatus'].invalid
           && orderFormForm.controls['orderStatus'].touched">
-      <span *ngIf="orderFormForm.controls['orderStatuse'].errors['required']"> Order Status is Required</span>
+      <span *ngIf="orderFormForm.controls['orderStatus'].errors['required']"> Order Status is Required</span>
       <span *ngIf="orderFormForm.controls['orderStatus'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
     </span>
     <br /><br />

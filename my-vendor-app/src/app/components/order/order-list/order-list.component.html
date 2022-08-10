@@ -1,1 +1,30 @@
-<p>order-list works!</p>
+<p>Order List</p>
+
+<div *ngFor="let o of orderForm">
+ <div class ="headings">
+   Customer's Name: {{o.cName}}
+   
+
+ </div>
+ <div class ="headings">
+    Order Status: {{o.orderStatus}}
+    
+ </div>
+
+ <div class ="headings">
+    Order cost: {{o.orderCost}}
+    
+ </div>
+
+ <div class ="headings">
+    Customer's #: {{o.cPnumber}}
+    <hr>
+ </div>
+
+</div>
+<div class="buttons">
+
+    <a href="Javascript:void" (click)="prev()">Prev </a> &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="Javascript:void" (click)="next()">Next </a>
+    
+</div>

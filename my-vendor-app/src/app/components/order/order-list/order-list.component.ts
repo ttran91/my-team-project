@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderForm } from '../model/order.model';
+import { OrderService } from '../service/order.service';
 
 @Component({
   selector: 'app-order-list',
@@ -7,9 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderListComponent implements OnInit {
 
-  constructor() { }
+  orderForm: OrderForm[];
+  page: number;
+
+
+  constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
+    this.orderService.orderForm$.subscribe(data=>{
+      this.orderForm = data;
+    });
   }
+
+  prev(){
+    let page = this.orderService.page$.getValue();
+    if(page > 0){
+      this.page = page-1;
+      this.orderService.page$.next(this.page);
+    }
+  }
+
+ next(){
+  let page = this.orderService.page$.getValue();
+  this.page = page+1;
+  this.orderService.page$.next(this.page);
+ }
 
 }
