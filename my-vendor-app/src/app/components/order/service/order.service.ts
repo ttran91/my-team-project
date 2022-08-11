@@ -10,6 +10,7 @@ export class OrderService {
 
   postApi: string;
   getAllApi: string;
+  deleteApi: string;
 
 
   orderForm$ = new BehaviorSubject<OrderForm[]>([]);
@@ -19,6 +20,8 @@ export class OrderService {
   constructor(private http: HttpClient) {
     this.postApi='http://localhost:8173/orderForm';
     this.getAllApi='http://localhost:8173/orderForm';
+    this.deleteApi='http://localhost:8173/orderForm/';
+    
   
    }
 
@@ -29,4 +32,11 @@ export class OrderService {
    getAllOrderForm(page: number,size: number) : Observable<OrderForm[]>{
     return this.http.get<OrderForm[]>(this.getAllApi + '?page='+page+'&size='+size);
    }
+
+   deleteOrderForm(oid: number): Observable<any> {
+  
+    return this.http.delete<any>(this.deleteApi + oid);
+   }
+
+
 }

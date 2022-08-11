@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { ModelComponent } from './model/model.component';
 import { VendorComponent } from './components/vendor/vendor.component';
@@ -12,6 +11,8 @@ import { OrderListComponent } from './components/order/order-list/order-list.com
 import { OrderStatComponent } from './components/order/order-stat/order-stat.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from'@angular/common/http';
+import { AppComponent } from './app.component';
+
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {HttpClientModule} from'@angular/common/http';
     OrderComponent,
     OrderAddComponent,
     OrderListComponent,
-    OrderStatComponent
+    OrderStatComponent,
+   
 
   ],
   imports: [
