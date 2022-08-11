@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.springboot.backend.model.Vendor"/>
-<fullyQualifiedTypeName name="antlr.collections.List"/>
-<fullyQualifiedTypeName name="com.springboot.backend.enums.CouponCode"/>
-<fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
-<fullyQualifiedTypeName name="javax.persistence.EnumType"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-<fullyQualifiedTypeName name="com.springboot.backend.repository.CustomerProductRepository"/>
-<fullyQualifiedTypeName name="com.springboot.backend.model.CustomerProduct"/>
-<fullyQualifiedTypeName name="java.util.Optional"/>
-<fullyQualifiedTypeName name="java.time.LocalDate"/>
-<fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetails"/>
-<fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UsernameNotFoundException"/>
-<fullyQualifiedTypeName name="com.springboot.backend.service.MyUserDetailsService"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.Table"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
 <fullyQualifiedTypeName name="org.springframework.security.crypto.password.PasswordEncoder"/>
 <fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetailsService"/>
@@ -32,13 +18,8 @@
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
 <fullyQualifiedTypeName name="com.springboot.backend.dto.ProductDTO"/>
 <fullyQualifiedTypeName name="com.springboot.backend.dto.VendorDTO"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="org.springframework.data.domain.PageRequest"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-<fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
 <fullyQualifiedTypeName name="com.springboot.backend.repository.ProductRepository"/>
 <fullyQualifiedTypeName name="com.springboot.backend.model.Product"/>
-<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.server.EnableEurekaServer"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 <fullyQualifiedTypeName name="org.springframework.cloud.client.discovery.EnableDiscoveryClient"/>
@@ -60,4 +41,23 @@
 <fullyQualifiedTypeName name="com.springboot.backend.repository.CustomerRepository"/>
 <fullyQualifiedTypeName name="com.springboot.backend.dto.CustomerDto"/>
 <fullyQualifiedTypeName name="com.springboot.backend.dto.OrderDto"/>
+<fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
+<fullyQualifiedTypeName name="org.springframework.data.domain.PageRequest"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.springboot.backend.dto.FoodStatDto"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+<fullyQualifiedTypeName name="java.util.Base64"/>
+<fullyQualifiedTypeName name="com.springboot.backend.dto.UserDto"/>
+<fullyQualifiedTypeName name="com.springboot.backend.dto.UserEditDto"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+<fullyQualifiedTypeName name="javax.transaction.Transactional"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Modifying"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+<fullyQualifiedTypeName name="com.springboot.backend.dto.InventoryEditDto"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>

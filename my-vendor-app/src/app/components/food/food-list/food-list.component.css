@@ -1,0 +1,10 @@
+.food_box{
+    border: 1px solid;
+    width: 90%;
+    border-radius: 7px;
+    padding: 7px;
+    box-shadow:2px 4px gray;
+    float: left;
+    margin: 7px;
+  }
+

@@ -1,0 +1,16 @@
+<h1>Inventory</h1>
+<h3 *ngIf="!(errorMsg == '')">{{errorMsg}}</h3>
+
+<div *ngFor="let i of inventory">
+  Inventory ID: {{i.id}}
+  &nbsp;&nbsp;
+  Quantity: {{i.amountInStock}}
+  &nbsp;&nbsp;
+  Max Quantity: {{i.maxStock}}
+  &nbsp;&nbsp;
+  Date: {{i.dateAdded}} 
+  &nbsp;&nbsp;
+  Note: {{i.outOfStockExp}}
+
+  <hr>
+</div>
