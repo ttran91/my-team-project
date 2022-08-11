@@ -1,27 +1,40 @@
-<h1>Profile</h1>
+
+<div class="login-form">
+      <h1 class="h1">Profile</h1>
+
+      <div class = "content">
+
 {{msg}}
 <form (submit)="onFormSubmit()" [formGroup]="profileForm">
 
-  <label>Enter Name: </label>
-  <input type="text" name="name"
+      <div class ="input-field">
+  <input placeholder= "NAME" type="text" name="name"
         formControlName="name">
-  <br /><br />
-  <label>Enter UserName: </label>
+      </div>
+  
+        <div class ="input-field">
   <input type="text" name="username"
         formControlName="username">
-  <br /><br />
+      </div>
 
-   <label>Enter Security Question </label>
-  <input type="text" name="question"
+
+  <div class ="input-field">
+  <input placeholder= "Enter Security Question"type="text" name="question"
         formControlName="securityQuestion">
-  <br /><br />
-  <label>Enter Security Answer </label>
-  <input type="tect" name="answer"
+      </div>
+ 
+  <div class ="input-field">
+  <input placeholder= "Enter Security Answer"type="tect" name="answer"
         formControlName="securityAnswer">
+      </div>
   <br /><br />
 
-  <input type="submit" value="Update Profile"
-        [disabled]="!profileForm.valid">
-
+  <div class="action button">
+  <button type="submit" value="Update Profile"
+        [disabled]="!profileForm.valid">UPDATE PROFILE</button>
+      </div>
 
 </form>
+
+</div>
+</div>

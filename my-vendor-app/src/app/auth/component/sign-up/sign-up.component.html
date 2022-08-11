@@ -1,37 +1,52 @@
-<h1>Sign Up</h1>
-<form (submit)="onFormSubmit()"
-[formGroup]="signUpForm">
+<div class="login-form">
+<h1 class ="h1">Sign Up</h1>
+<div class = "content">
+<form (submit)="onFormSubmit()" [formGroup]="signUpForm">
 
-  <label>Enter Name: </label>
-  <input type="text" name="name"
+<div class ="input-field">
+  <input placeholder= "ENTER NAME" type="text" name="name"
         formControlName="name">
-  <br /><br />
-  <label>Enter UserName: </label>
-  <input type="text" name="username"
+      </div>   
+
+  <div class ="input-field">
+  <input placeholder= "ENTER USERNAME"  type="text" name="username"
         formControlName="username">
-  <br /><br />
+      </div>
 
-  <label>Enter Password </label>
-  <input type="password" name="password"
+  <div class ="input-field">
+  <input placeholder= "ENTER PASSWORD" type="password" name="password"
         formControlName="password">
-  <br /><br />
-  <label>Select Role: </label>
-  <select formControlName="accountType">
-    <option value="ADMIN">CUSTOMER</option>
-    <option value="USER">VENDOR</option>
-  </select>
-  <br /><br />
-  <label>Enter Security Question </label>
-  <input type="text" name="question"
+      </div>
+
+
+  <div class ="input-field">
+  <input placeholder= "ENTER SECURITY QUESTION"  type="text" name="question"
         formControlName="securityQuestion">
-  <br /><br />
-  <label>Enter Security Answer </label>
-  <input type="tect" name="answer"
+      </div>
+
+  <div class ="input-field">
+ 
+  <input placeholder= "ENTER SECURITY ANSWER" type="text" name="answer"
         formControlName="securityAnswer">
-  <br /><br />
+  </div>
+  <br /> <br />
+  
+  <div class ="input-field">
+    <label>SELECT ACCOUNT TYPE</label> 
+     <br /> <br />
+    <select formControlName="accountType">
+      <option value="CUSTOMER">CUSTOMER</option>
+      <option value="VENDOR">VENDOR</option>
+    </select>
+  </div>
 
-  <input type="submit" value="Login"
-        [disabled]="!signUpForm.valid">
+  <br /> <br /> 
 
+  <div class="action button">
+  <button input type="submit" value="Login" [disabled]="!signUpForm.valid">SIGN UP
+  </button>
+  </div>
 
 </form>
+</div>
+</div>
