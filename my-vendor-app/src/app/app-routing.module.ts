@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { LoginComponent } from './auth/component/login/login.component';
 import { LogoutComponent } from './auth/component/logout/logout.component';
 import { PasswordResetComponent } from './auth/component/password-reset/password-reset.component';
@@ -10,6 +11,10 @@ import { AuthguardService } from './auth/service/authguard.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FoodComponent } from './components/food/food/food.component';
 import { InventoryComponent } from './components/inventory/inventory/inventory.component';
+import { OrderAddComponent } from './components/order/order-add/order-add.component';
+import { OrderListComponent } from './components/order/order-list/order-list.component';
+import { OrderStatComponent } from './components/order/order-stat/order-stat.component';
+import { OrderComponent } from './components/order/order/order.component';
 
 const routes: Routes = [
 
@@ -27,8 +32,13 @@ const routes: Routes = [
                   canActivate:[AuthguardService] },
   {path:'password-reset' ,component: UsernameVerifyComponent},
   {path:'password-reset-form' ,component: PasswordResetComponent},
+  {path:  'order', component: OrderComponent},
+  {path: 'order-add' , component: OrderAddComponent},
+  {path: 'order-list' , component: OrderListComponent},
+  {path: 'order-stat' , component: OrderStatComponent},
 
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
