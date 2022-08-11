@@ -1,12 +1,33 @@
-<h1>WELCOME TO ANGULAR</h1>
 
-<div class ="navbar">
+<!-- <app-food-add></app-food-add> -->
+<!-- <app-food-add-reactive></app-food-add-reactive> -->
+<!-- <app-food-list [data]= "foods"></app-food-list> -->
 
+
+<div class="navbar">
   <span>
-    <a routerLink="/order">Order</a>&nbsp;&nbsp;&nbsp;
+
+    <a routerLink="/dashboard">Dashboard</a> &nbsp;&nbsp;&nbsp;
+    <a routerLink="/login">Login</a> &nbsp;&nbsp;&nbsp;
+    <a routerLink="/food">Food</a> &nbsp;&nbsp;&nbsp;
+    <a routerLink="/inventory">Inventory</a> &nbsp;&nbsp;&nbsp;
+    
+  
   </span>
-  <hr>
-</div>
-<div>
-<router-outlet></router-outlet>
-</div>
+
+  <span *ngIf="username != '' ">
+    Welcome {{username}}  &nbsp;&nbsp;&nbsp;
+    <a routerLink="/profile">Profile</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/logout">Logout</a>
+  </span>
+
+ 
+
+
+    <hr>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+

@@ -1,5 +1,7 @@
 package com.springboot.backend.controller;
 
+import java.time.LocalDate;
+import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
@@ -10,8 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.springboot.backend.dto.InventoryEditDto;
+import com.springboot.backend.dto.UserDto;
 import com.springboot.backend.model.Food;
 import com.springboot.backend.model.Inventory;
+import com.springboot.backend.model.UserInfo;
 import com.springboot.backend.model.Vendor;
 import com.springboot.backend.repository.FoodRepository;
 import com.springboot.backend.repository.InventoryRepository;
@@ -52,13 +57,26 @@ public class InventoryController {
 			throw new RuntimeException("Vendor ID is Invalid!!");
 
 		Vendor vendor = optionalV.get();
+		
+		
 
 		// Attach food and category to the inventory
+		inventory.setDateAdded(LocalDate.now());
 		inventory.setFood(food);
 		inventory.setVendor(vendor);
 
 		// Save the inventory in the DB
 		return inventoryRepository.save(inventory);
 	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

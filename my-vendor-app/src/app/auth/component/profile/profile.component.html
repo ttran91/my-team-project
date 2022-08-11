@@ -1,0 +1,27 @@
+<h1>Profile</h1>
+{{msg}}
+<form (submit)="onFormSubmit()" [formGroup]="profileForm">
+
+  <label>Enter Name: </label>
+  <input type="text" name="name"
+        formControlName="name">
+  <br /><br />
+  <label>Enter UserName: </label>
+  <input type="text" name="username"
+        formControlName="username">
+  <br /><br />
+
+   <label>Enter Security Question </label>
+  <input type="text" name="question"
+        formControlName="securityQuestion">
+  <br /><br />
+  <label>Enter Security Answer </label>
+  <input type="tect" name="answer"
+        formControlName="securityAnswer">
+  <br /><br />
+
+  <input type="submit" value="Update Profile"
+        [disabled]="!profileForm.valid">
+
+
+</form>

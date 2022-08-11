@@ -1,5 +1,7 @@
 package com.springboot.backend.model;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -31,18 +33,30 @@ public class UserInfo {
 	@Column(nullable=false)
 	private String accountType;
 
+	@Column(nullable = false)
+	private String securityQuestion; 
+
+	@Column(nullable = false)
+	private String securityAnswer; 
+
+	private LocalDate passwordLastReset;
+
 	public UserInfo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public UserInfo(Long id, String name, String username, String password, String accountType) {
+	public UserInfo(Long id, String name, String username, String password, String accountType, String securityQuestion,
+			String securityAnswer, LocalDate passwordLastReset) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.username = username;
 		this.password = password;
 		this.accountType = accountType;
+		this.securityQuestion = securityQuestion;
+		this.securityAnswer = securityAnswer;
+		this.passwordLastReset = passwordLastReset;
 	}
 
 	public Long getId() {
@@ -85,11 +99,40 @@ public class UserInfo {
 		this.accountType = accountType;
 	}
 
+	public String getSecurityQuestion() {
+		return securityQuestion;
+	}
+
+	public void setSecurityQuestion(String securityQuestion) {
+		this.securityQuestion = securityQuestion;
+	}
+
+	public String getSecurityAnswer() {
+		return securityAnswer;
+	}
+
+	public void setSecurityAnswer(String securityAnswer) {
+		this.securityAnswer = securityAnswer;
+	}
+
+	public LocalDate getPasswordLastReset() {
+		return passwordLastReset;
+	}
+
+	public void setPasswordLastReset(LocalDate passwordLastReset) {
+		this.passwordLastReset = passwordLastReset;
+	}
+
 	@Override
 	public String toString() {
 		return "UserInfo [id=" + id + ", name=" + name + ", username=" + username + ", password=" + password
-				+ ", accountType=" + accountType + "]";
-	}
+				+ ", accountType=" + accountType + ", securityQuestion=" + securityQuestion + ", securityAnswer="
+				+ securityAnswer + ", passwordLastReset=" + passwordLastReset + "]";
+	} 
+	
+	
+	
+	
 	
 	
 	
