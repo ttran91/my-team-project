@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { OrderForm } from '../model/order.model';
 import { OrderService } from '../service/order.service';
 
@@ -9,13 +9,15 @@ import { OrderService } from '../service/order.service';
 })
 export class OrderListComponent implements OnInit {
 
-  orderForm: OrderForm[];
-  page: number;
+   
+    orderForm: OrderForm[];
+     page: number;
+   
 
 
   constructor(private orderService: OrderService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
     this.orderService.orderForm$.subscribe(data=>{
       this.orderForm = data;
     });
@@ -34,5 +36,15 @@ export class OrderListComponent implements OnInit {
   this.page = page+1;
   this.orderService.page$.next(this.page);
  }
+
+ onorderFormDelete(oid: number) {
+  this.orderService.deleteOrderForm(oid).subscribe({
+    next: (data)=> {
+
+    } 
+  })
+  
+ }
+
 
 }

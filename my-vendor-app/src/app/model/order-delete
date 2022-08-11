@@ -1,0 +1,9 @@
+export class OrderDelete{
+    id: number;
+    cNmae: string;
+    orderStatus?: string;
+    orderCost: number;
+    cPnumber: number;
+
+
+}

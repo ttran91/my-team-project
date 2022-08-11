@@ -4,12 +4,13 @@ import { Subscription } from 'rxjs';
 import { OrderForm } from '../model/order.model';
 import { OrderService } from '../service/order.service';
 
+
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.css']
 })
-export class OrderComponent implements OnInit, OnDestroy {
+export class OrderComponent implements OnInit {
 
   subscriptions: Subscription[]
   orderForm: OrderForm[]
@@ -38,10 +39,7 @@ export class OrderComponent implements OnInit, OnDestroy {
       })
      )
     }
-     ngOnDestroy(): void {
-      throw new Error('Method not implemented.');
-    
-  }
+
 
 }
 
