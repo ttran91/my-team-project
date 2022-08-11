@@ -1,49 +1,32 @@
-Component Assignments:
-======================
-
-# MyVendorApp
+MyVendorApp Component Assignments:
+==================================
 
 
 Tran
 ----
-(DONE) sign-up
-(DONE) login
-(DONE) logout
-(DONE) profile
-(DONE) password-reset
-(DONE) username-verify
+(DONE) sign-up <br />
+(DONE) login <br />
+(DONE) logout <br />
+(DONE) profile <br />
+(DONE) password-reset <br />
+(DONE) username-verify <br />
 
-(DONE) food 
-(DONE) food-list
-(DONE) food-add
-(DONE) food-stat
+(DONE) food <br />
+(DONE) food-list <br />
+(DONE) food-add <br />
+(DONE) food-stat <br />
 
-food-delete
-food.service
+food-delete <br />
+food.model <br />
+food.service <br />
 
 
 Umair
 -----
-order
-order-list
-order-add
-order-stat
-order.service
-
-
-# MyCustomerApp
-
-Vasaav
-------
-
-
-
-Taylor
-------
-
-
-
-Chan
-----
-
-
+order <br />
+order-list <br />
+order-add <br />
+order-stat <br />
+order.service <br />
+order.model <br />
+order-delete <br />
