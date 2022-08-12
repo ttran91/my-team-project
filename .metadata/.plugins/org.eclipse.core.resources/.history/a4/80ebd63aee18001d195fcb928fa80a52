@@ -1,5 +1,0 @@
-package com.springboot.backend.dto;
-
-public class UserEditDto {
-
-}

@@ -18,9 +18,9 @@ export class OrderService {
 
 
   constructor(private http: HttpClient) {
-    this.postApi='http://localhost:8173/orderForm';
-    this.getAllApi='http://localhost:8173/orderForm';
-    this.deleteApi='http://localhost:8173/orderForm/';
+    this.postApi='http://localhost:8122/orderForm';
+    this.getAllApi='http://localhost:8122/orderForm';
+    this.deleteApi='http://localhost:8122/orderForm/';
     
   
    }
