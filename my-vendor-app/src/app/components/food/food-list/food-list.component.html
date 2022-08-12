@@ -1,19 +1,31 @@
 
-
-<h2>Food List</h2>
+<div class="login-form">
+  <div class="content">
+<h2>Menu</h2>
 
 <div class= "food_box" *ngFor="let f of food">
+  
+  <a href ='javascript::void' (click)="foodDelete(f.id)"><button class="delete">DELETE</button></a>
   Name: <strong>{{f.name}}</strong>
-  &nbsp;&nbsp;
+  &nbsp;|&nbsp;
   Category: {{f.foodCategory}}
-  &nbsp;&nbsp;
-  Price: {{f.foodPrice}}
+  &nbsp;|&nbsp;
+  Price: {{f.foodPrice}} 
+  
+
+
   <hr>
 </div>
 <br /><br />
 <div>
-<a href="Javascript:void" (click)="prev()">Prev </a> 
+
+  <div class="action button">
+<a href="Javascript:void" (click)="prev()"><button>PREV</button></a> 
+ 
 &nbsp;&nbsp;&nbsp;&nbsp;
-<a href="Javascript:void" (click)="next()">Next </a>
+<a href="Javascript:void" (click)="next()"><button>NEXT</button> </a>
+</div>
+</div>
+</div>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Food } from '../model/food.model';
 import { FoodService } from '../service/food.service';
 
@@ -7,12 +7,16 @@ import { FoodService } from '../service/food.service';
   templateUrl: './food.component.html',
   styleUrls: ['./food.component.css']
 })
-export class FoodComponent implements OnInit {
+export class FoodComponent implements OnInit, OnDestroy {
 
   foods: Food[];
   page: number;
   size:number;
+  subscriptions: any;
   constructor(private foodService: FoodService) { }
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(sub=>sub.unsubscribe())
+  }
 
   ngOnInit(): void {
     this.size = 5;
