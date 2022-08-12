@@ -10,7 +10,7 @@ import { OrderService } from '../service/order.service';
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.css']
 })
-export class OrderComponent implements OnInit {
+export class OrderComponent implements OnInit, OnDestroy {
 
   subscriptions: Subscription[]
   orderForm: OrderForm[]
@@ -35,9 +35,13 @@ export class OrderComponent implements OnInit {
           error: (e)=>{
 
           }
-        })
+        });
       })
-     )
+     );
+    }
+    ngOnDestroy(): void {
+      this.subscriptions.forEach(sub=>sub.unsubscribe())
+
     }
 
 

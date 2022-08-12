@@ -2,7 +2,10 @@ package com.springboot.backend.controller;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -40,27 +43,35 @@ public class OrderFormController {
 	
 	
 	@GetMapping("/orderForm")
-	public List<OrderFormDto> getAllOrderFormData(
+	public List<OrderForm> getAllOrderFormData(
 					@RequestParam("page") Integer page,
 					@RequestParam("size") Integer size){
 			
 		Pageable pageable=PageRequest.of(page, size);
 		
-		 List<OrderForm> list = orderFormRepository.findAll(pageable).getContent();
-		 List<OrderFormDto> listOfDto = new ArrayList<>();
-		  list.stream().forEach(of->{
-			  OrderFormDto ofDto = new OrderFormDto();
-			  ofDto.setId(of.getId());
-			  ofDto.setcName(of.getcName());
-			  ofDto.setOrderStatus(of.getOrderStatus());
-			  ofDto.setOrderCost(of.getOrderCost());
-			  ofDto.setcPnumber(of.getcPnumber());
-			  
-			  listOfDto.add(ofDto);
-		  });
-		 
-		 
-		 return listOfDto;
+		return orderFormRepository.findAll(pageable).getContent();
+
+		
+		
+	}
+	
+	
+	@GetMapping("/orderForm/stats")
+	public List<OrderFormDto> getFormStats() {
+		List<OrderForm> list = orderFormRepository.findAll();
+		System.out.println(list); //double checking what list is returning
+		List<OrderFormDto> listDto = new ArrayList<>();
+		Map<String,Integer> statMap = new HashMap<>();
+		Map<String, List<OrderForm>> map
+							= list.stream().collect(Collectors.groupingBy(o->o.getcName()));
+		
+		for(Map.Entry<String, List<OrderForm>> o: map.entrySet()) {
+			OrderFormDto dto = new OrderFormDto();
+			dto.setcName(o.getKey());
+			dto.setCount(o.getValue().size());
+			listDto.add(dto);
+		}
+		return listDto;
 		
 	}
 	

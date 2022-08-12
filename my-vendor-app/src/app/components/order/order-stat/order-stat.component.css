@@ -1,0 +1,19 @@
+.estat{
+
+    border: 2px solid;
+  
+  }
+  
+  .sentry{
+  
+    padding-right: 10px;
+    margin: 10px;
+    float: left;
+  }
+  
+  
+  .count{
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: right;
+  }
