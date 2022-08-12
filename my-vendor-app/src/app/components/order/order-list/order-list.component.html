@@ -1,4 +1,7 @@
 <p>Order List</p>
+<span *ngIf="!(msg =='')">
+   {{msg}}
+   </span>
 <div class ="headings">
    <div *ngFor="let o of orderForm">
  
@@ -8,6 +11,7 @@
     Customer's #: {{o.cPnumber}}
     <hr>
     <a href ='javascript::void' (click)="onorderFormDelete(o.id)">delete</a>
+    <hr>
    </div>
 
    <div class="buttons">

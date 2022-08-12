@@ -1,1 +1,11 @@
-<p>order-stat works!</p>
+<div class="estat">
+    <div *ngFor="let s of stat" class="sentry">
+    <span class="cName">
+        {{s.cName}}
+    </span>
+    <br />
+    <span class="count">
+      {{s.count}}
+  </span>
+    </div>
+  </div>

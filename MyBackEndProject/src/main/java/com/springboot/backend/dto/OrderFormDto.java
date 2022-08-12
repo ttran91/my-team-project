@@ -1,26 +1,47 @@
 package com.springboot.backend.dto;
 
+import java.util.List;
+
+import com.springboot.backend.model.OrderForm;
+
 public class OrderFormDto {
 	
 	private Long id;
 	private String cName;
 	private String orderStatus;
 	private Double orderCost;
-	private Long cPnumber;
+	private Integer cPnumber;
+	private Integer count;
+	
+	
+	
+	
 	public OrderFormDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public OrderFormDto(Long id, String cName, String orderStatus, Double orderCost, Long cPnumber) {
+	
+	
+	public OrderFormDto(Long id, String cName, String orderStatus, Double orderCost, Integer cPnumber, Integer count) {
 		super();
 		this.id = id;
 		this.cName = cName;
 		this.orderStatus = orderStatus;
 		this.orderCost = orderCost;
 		this.cPnumber = cPnumber;
+		this.count = count;
 	}
 	
-	
+	public Integer getCount() {
+		return count;
+	}
+
+
+	public void setCount(Integer count) {
+		this.count = count;
+	}
+
+
 	public Long getId() {
 		return id;
 	}
@@ -61,21 +82,25 @@ public class OrderFormDto {
 	}
 	
 	
-	public Long getcPnumber() {
+	public Integer getcPnumber() {
 		return cPnumber;
 	}
 	
 	
-	public void setcPnumber(Long long1) {
-		this.cPnumber = long1;
+	public Long setcPnumber(Long cPnumber) {
+		return cPnumber;
 	}
-	
-	
+
+
 	@Override
 	public String toString() {
 		return "OrderFormDto [id=" + id + ", cName=" + cName + ", orderStatus=" + orderStatus + ", orderCost="
-				+ orderCost + ", cPnumber=" + cPnumber + "]";
+				+ orderCost + ", cPnumber=" + cPnumber + ", count=" + count + "]";
 	}
+	
+	
+
+	
 	
 	
 	
