@@ -32,7 +32,7 @@ const routes: Routes = [
                   canActivate:[AuthguardService] },
   {path:'password-reset' ,component: UsernameVerifyComponent},
   {path:'password-reset-form' ,component: PasswordResetComponent},
-  {path:  'order', component: OrderComponent},
+  {path:  'order', component: OrderComponent, canActivate:[AuthguardService]},
   {path: 'order-add' , component: OrderAddComponent},
   {path: 'order-list' , component: OrderListComponent},
   {path: 'order-stat' , component: OrderStatComponent},

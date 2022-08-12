@@ -27,6 +27,7 @@ export class OrderService {
     this.getAllApi='http://localhost:8173/orderForm';
     this.deleteApi='http://localhost:8173/orderForm/';
     this.getStatsApi='http://localhost:8173/orderForm/stats';
+
   
    }
 
