@@ -1,4 +1,3 @@
-
 <span *ngIf="!(msg =='')">
   {{msg}}
   </span>
@@ -24,8 +23,6 @@
     <input type="text" name="orderCost" formControlName="orderCost">
     <span *ngIf="orderFormForm.controls['orderCost'].invalid && orderFormForm.controls['orderCost'].touched">
       <span *ngIf="orderFormForm.controls['orderCost'].errors['required']"> cost is Required</span>
-      <span *ngIf="orderFormForm.controls['orderCost'].errors['maxlength']"> Max Length is 10</span>
-      <span *ngIf="orderFormForm.controls['orderCost'].errors['pattern']"> Pattern allowed: [0-9 ]+</span>
     </span>
     <br /><br />
     <label>Enter Customer Phone </label>
@@ -36,5 +33,5 @@
     
     </span>
     <br /><br />
-    <input type="submit" value="Add Employee" [disabled]="!orderFormForm.valid">
+    <input type="submit" value="Add Order" [disabled]="!orderFormForm.valid">
   </form>

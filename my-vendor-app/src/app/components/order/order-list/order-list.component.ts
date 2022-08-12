@@ -12,12 +12,15 @@ export class OrderListComponent implements OnInit {
    
     orderForm: OrderForm[];
      page: number;
+     msg: string;
+    
    
 
 
   constructor(private orderService: OrderService) { }
 
   ngOnInit(): void{
+    this.msg='';
     this.orderService.orderForm$.subscribe(data=>{
       this.orderForm = data;
     });
@@ -40,8 +43,13 @@ export class OrderListComponent implements OnInit {
  onorderFormDelete(oid: number) {
   this.orderService.deleteOrderForm(oid).subscribe({
     next: (data)=> {
+      this.msg="Order is deleted from the system";
+      this.orderForm = this.orderForm.filter(o=>o.id != oid);
 
-    } 
+    },
+    error: (e)=>{
+      this.msg='Order cant be deleted'
+    }
   })
   
  }
