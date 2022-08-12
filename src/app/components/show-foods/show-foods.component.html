@@ -1,0 +1,7 @@
+<h1>Food Menu</h1>
+<h3 *ngIf="!(errorMsg == '')">{{errorMsg}}</h3>
+
+<div *ngFor="let f of food">
+    {{f.idFood}}&nbsp;{{f.foodName}}&nbsp;{{f.foodCategory}}&nbsp;{{f.foodPrice}}&nbsp;{{f.vendorName}}<br />
+
+</div>

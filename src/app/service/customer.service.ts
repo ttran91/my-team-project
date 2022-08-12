@@ -4,6 +4,7 @@ import { Observable } from "rxjs";
 import { Customer } from '../model/customer.model';
 
 
+
 @Injectable({
     providedIn: 'root'
 })
@@ -22,10 +23,10 @@ export class CustomerService{
     
 
      constructor(private http: HttpClient) {
-        this.getcustApi = "http://localhost:8181/customer/";
-        this.postAccDetApi="http://localhost:8181/customer/";
-        this.postAccBalApi="http://localhost:8181/customer/balance/";
-        this.getAllCustomersApi="http://localhost:8181/customer"
+        this.getcustApi = "http://localhost:4401/customer/";
+        this.postAccDetApi="http://localhost:4401/customer/";
+        this.postAccBalApi="http://localhost:4401/customer/balance/";
+        this.getAllCustomersApi="http://localhost:4401/customer"
 
      }
      getSingleCustomer(idCustomer: number): Observable<any>{

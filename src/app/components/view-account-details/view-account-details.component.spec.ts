@@ -11,7 +11,9 @@ describe('ViewAccountDetailsComponent', () => {
       declarations: [ ViewAccountDetailsComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(ViewAccountDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

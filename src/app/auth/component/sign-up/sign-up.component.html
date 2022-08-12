@@ -1,0 +1,52 @@
+<div class="login-form">
+    <h1 class ="h1">Sign Up</h1>
+    <div class = "content">
+    <form (submit)="onFormSubmit()" [formGroup]="signUpForm">
+    
+    <div class ="input-field">
+      <input placeholder= "ENTER NAME" type="text" name="name"
+            formControlName="name">
+          </div>   
+    
+      <div class ="input-field">
+      <input placeholder= "ENTER USERNAME"  type="text" name="username"
+            formControlName="username">
+          </div>
+    
+      <div class ="input-field">
+      <input placeholder= "ENTER PASSWORD" type="password" name="password"
+            formControlName="password">
+          </div>
+    
+    
+      <div class ="input-field">
+      <input placeholder= "ENTER SECURITY QUESTION"  type="text" name="question"
+            formControlName="securityQuestion">
+          </div>
+    
+      <div class ="input-field">
+     
+      <input placeholder= "ENTER SECURITY ANSWER" type="text" name="answer"
+            formControlName="securityAnswer">
+      </div>
+      <br /> <br />
+      
+      <div class ="input-field">
+        <label>SELECT ACCOUNT TYPE</label> 
+         <br /> <br />
+        <select formControlName="accountType">
+          <option value="CUSTOMER">CUSTOMER</option>
+          <option value="VENDOR">VENDOR</option>
+        </select>
+      </div>
+    
+      <br /> <br /> 
+    
+      <div class="action button">
+      <button input type="submit" value="Login" [disabled]="!signUpForm.valid">SIGN UP
+      </button>
+      </div>
+    
+    </form>
+    </div>
+    </div>

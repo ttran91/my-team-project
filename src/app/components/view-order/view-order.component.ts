@@ -10,7 +10,6 @@ export class ViewOrderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
   }
 
 }

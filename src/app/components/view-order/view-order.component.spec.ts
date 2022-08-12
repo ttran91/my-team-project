@@ -11,7 +11,9 @@ describe('ViewOrderComponent', () => {
       declarations: [ ViewOrderComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(ViewOrderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
