@@ -21,6 +21,7 @@ import com.springboot.backend.dto.FoodDto;
 import com.springboot.backend.dto.VendorDto;
 import com.springboot.backend.model.Customer;
 import com.springboot.backend.model.Food;
+import com.springboot.backend.model.Order;
 import com.springboot.backend.model.UserInfo;
 import com.springboot.backend.model.Vendor;
 import com.springboot.backend.repository.FoodRepository;
@@ -102,6 +103,13 @@ public class VendorController {
 		else
 			throw new RuntimeException("ID is invalid");
 	}
+	
+	@GetMapping("/vendor/food/{fid}")
+	public List<Vendor> getVendorByFoodId(@PathVariable("fid") Long fid){
+		List<Vendor> list = vendorRepository.findByFoodId(fid);
+		return list;
+	}
+
 	
 	@DeleteMapping("/vendor/{id}")
 	public void deleteVendor(@PathVariable("id") Long id){

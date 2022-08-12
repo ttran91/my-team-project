@@ -29,6 +29,9 @@ public class Vendor {
 	
 	@OneToOne
 	private UserInfo userInfo;
+	
+	@OneToOne
+	private Food food;
 
 	public Vendor() {
 		super();
