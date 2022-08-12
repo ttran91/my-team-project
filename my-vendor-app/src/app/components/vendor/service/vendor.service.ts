@@ -1,21 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { OrderForm } from '../model/order.model';
-import { Stat } from '../model/Stat.model';
+import { VendorComponent } from '../vendor.component';
 
 @Injectable({
   providedIn: 'root'
 })
-export class OrderService {
+export class VendorService {
 
   postApi: string;
-  getAllApi: string;
   deleteApi: string;
-  getStatsApi: string;
+  getApi:string;
 
 
-  orderForm$ = new BehaviorSubject<OrderForm[]>([]);
+  orderForm$ = new BehaviorSubject<VendorComponent[]>([]);
   orderStat$ = new BehaviorSubject<OrderForm[]>([]);
   page$ = new BehaviorSubject<number>(0);
   stat$ = new BehaviorSubject<Boolean>(false);

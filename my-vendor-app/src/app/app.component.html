@@ -4,17 +4,24 @@
 <!-- <app-food-list [data]= "foods"></app-food-list> -->
 
 
-<div class="navbar">
-  <span>
+<nav class="navbar">
+<div class="navbar-container container">
+  <input type="checkbox" name="" id="">
+  <div class="hamburger-lines">
+    <span class="line line1"></span>
+    <span class="line line2"></span>
+    <span class="line line3"></span>
+  </div>
 
-    <a routerLink="/dashboard">Dashboard</a> &nbsp;&nbsp;&nbsp;
-    <a routerLink="/login">Login</a> &nbsp;&nbsp;&nbsp;
-    <a routerLink="/food">Food</a> &nbsp;&nbsp;&nbsp;
-    <a routerLink="/inventory">Inventory</a> &nbsp;&nbsp;&nbsp;
-    <a routerLink="/order">Order</a>&nbsp;&nbsp;&nbsp;
-    
+<ul class="menu-items">
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/login">Login</a></li>
+    <li><a routerLink="/food">Food</a></li>
+    <li><a routerLink="/inventory">Inventory</a></li>
+    <li><a routerLink="/order">Order</a></li>
+</ul>
+  <h1 class="logo">VENDOR</h1>
   
-  </span>
 
   <span *ngIf="username != '' ">
     Welcome {{username}}  &nbsp;&nbsp;&nbsp;
@@ -24,9 +31,11 @@
   </span>
 
 
-    <hr>
+
   </div>
   <div>
     <router-outlet></router-outlet>
   </div>
+</nav>
 
+  

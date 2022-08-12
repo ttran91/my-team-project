@@ -1,5 +1,5 @@
 .estat{
-    border: 1px solid;
+    border: 6px;
   
   }
   
@@ -12,12 +12,14 @@
   
   
   .dept{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: x-large;
+    font-family: 'Rubik', sans-serif;
+    font-size: Medium;
   }
   
   .count{
     font-size: xx-large;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: right;
+    font-family: 'Rubik', sans-serif;
+    color:darkred;
+    text-align: center;
   }
+
