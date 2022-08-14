@@ -1,16 +1,12 @@
 package com.springboot.backend.dto;
 
-import java.util.List;
-
-import com.springboot.backend.model.OrderForm;
-
 public class OrderFormDto {
 	
 	private Long id;
 	private String cName;
 	private String orderStatus;
 	private Double orderCost;
-	private Integer cPnumber;
+	private Long cPnumber;
 	private Integer count;
 	
 	
@@ -22,7 +18,7 @@ public class OrderFormDto {
 	}
 	
 	
-	public OrderFormDto(Long id, String cName, String orderStatus, Double orderCost, Integer cPnumber, Integer count) {
+	public OrderFormDto(Long id, String cName, String orderStatus, Double orderCost, Long cPnumber, Integer count) {
 		super();
 		this.id = id;
 		this.cName = cName;
@@ -82,7 +78,7 @@ public class OrderFormDto {
 	}
 	
 	
-	public Integer getcPnumber() {
+	public Long getcPnumber() {
 		return cPnumber;
 	}
 	

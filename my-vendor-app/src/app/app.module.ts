@@ -21,6 +21,7 @@ import { InventoryComponent } from './components/inventory/inventory/inventory.c
 import { OrderAddComponent } from './components/order/order-add/order-add.component';
 import { OrderListComponent } from './components/order/order-list/order-list.component';
 import { OrderStatComponent } from './components/order/order-stat/order-stat.component';
+import { OrderEditComponent } from './components/order/order-edit/order-edit.component';
 
 
 
@@ -46,7 +47,8 @@ import { OrderStatComponent } from './components/order/order-stat/order-stat.com
     OrderComponent,
     OrderAddComponent,
     OrderListComponent,
-    OrderStatComponent
+    OrderStatComponent,
+    OrderEditComponent
   ],
   
   imports: [
