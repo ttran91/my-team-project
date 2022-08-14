@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { OrderForm } from '../model/order.model';
 import { Stat } from '../model/Stat.model';
 
@@ -23,10 +24,10 @@ export class OrderService {
 
 
   constructor(private http: HttpClient) {
-    this.postApi='http://localhost:8122/orderForm';
-    this.getAllApi='http://localhost:8122/orderForm';
-    this.deleteApi='http://localhost:8122/orderForm/';
-    this.getStatsApi='http://localhost:8122/orderForm/stats';
+    this.postApi= environment.serverUrl+'/orderForm';
+    this.getAllApi=environment.serverUrl+'/orderForm';
+    this.deleteApi=environment.serverUrl+'/orderForm/';
+    this.getStatsApi=environment.serverUrl+'/orderForm/stats';
 
 
   
