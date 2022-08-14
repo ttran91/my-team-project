@@ -63,11 +63,11 @@ public class OrderFormController {
 		List<OrderFormDto> listDto = new ArrayList<>();
 		Map<String,Integer> statMap = new HashMap<>();
 		Map<String, List<OrderForm>> map
-							= list.stream().collect(Collectors.groupingBy(o->o.getcName()));
+							= list.stream().collect(Collectors.groupingBy(o->o.getOrderStatus()));
 		
 		for(Map.Entry<String, List<OrderForm>> o: map.entrySet()) {
 			OrderFormDto dto = new OrderFormDto();
-			dto.setcName(o.getKey());
+			dto.setOrderStatus(o.getKey());
 			dto.setCount(o.getValue().size());
 			listDto.add(dto);
 		}

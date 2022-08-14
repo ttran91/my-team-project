@@ -20,10 +20,12 @@ export class FoodService {
   updatedStat = new BehaviorSubject<Food[]>([]);
 
   constructor(private http: HttpClient) {
+<<<<<<< HEAD
 
     this.postApi='http://localhost:8173/food/';
     this.getAllApi='http://localhost:8173/food';
     this.getStatsApi='http://localhost:8173/food/stats';
+
 
    }
 
