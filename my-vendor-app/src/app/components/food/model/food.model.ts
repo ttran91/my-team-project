@@ -11,3 +11,13 @@ export class Food {
     foodCategory: string;
     count: number;
   }
+
+  export class foodDelete{
+    id?: number;
+    name: string;
+    foodCategory: string;
+    foodPrice: number;
+    vendor_id?: number;
+
+
+}
