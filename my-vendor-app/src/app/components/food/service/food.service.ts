@@ -18,9 +18,9 @@ export class FoodService {
   stat$ = new BehaviorSubject<Boolean>(false);
 
   constructor(private http: HttpClient) {
-    this.postApi='http://localhost:8122/food/2';
-    this.getAllApi='http://localhost:8122/food';
-    this.getStatsApi='http://localhost:8122/food/stats';
+    this.postApi='http://localhost:8173/food/2';
+    this.getAllApi='http://localhost:8173/food';
+    this.getStatsApi='http://localhost:8173/food/stats';
    }
 
    public postFood(food: Food):Observable<Food>{
