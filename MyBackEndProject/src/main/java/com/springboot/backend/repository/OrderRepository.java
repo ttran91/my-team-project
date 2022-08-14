@@ -15,5 +15,7 @@ public interface OrderRepository extends JpaRepository<Order, Long>{
 	
 	@Query("select o from Order o where o.vendor.id=?1")
 	List<Order> getOrderByVendorId(Long vid);
+	
+
 
 }
