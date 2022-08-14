@@ -16,7 +16,7 @@ export class OrderService {
 
 
   orderForm$ = new BehaviorSubject<OrderForm[]>([]);
-  orderStat$ = new BehaviorSubject<OrderForm[]>([]);
+  orderStat$ = new BehaviorSubject<any>(0);
   page$ = new BehaviorSubject<number>(0);
   stat$ = new BehaviorSubject<Boolean>(false);
 

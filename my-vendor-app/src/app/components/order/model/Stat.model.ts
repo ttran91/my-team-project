@@ -1,6 +1,6 @@
 export class Stat{
 
-    cName: string;
+    orderStatus: string;
     count: number;
     
 }

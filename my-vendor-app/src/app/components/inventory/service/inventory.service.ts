@@ -8,7 +8,7 @@ import { Inventory } from '../model/inventory.model';
 })
 export class InventoryService {
 
-  getInventoryApi='http://localhost:8122/inventory';
+  getInventoryApi='http://localhost:8173/inventory';
   constructor(private http: HttpClient) { }
 
   fetchInventory() : Observable<Inventory[]>{
