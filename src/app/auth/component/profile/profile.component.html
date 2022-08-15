@@ -1,0 +1,40 @@
+
+<div class="login-form">
+      <h1 class="h1">Profile</h1>
+  
+      <div class = "content">
+  
+  {{msg}}
+  <form (submit)="onFormSubmit()" [formGroup]="profileForm">
+  
+      <div class ="input-field">
+  <input placeholder= "NAME" type="text" name="name"
+        formControlName="name">
+      </div>
+  
+        <div class ="input-field">
+  <input type="text" name="username"
+        formControlName="username">
+      </div>
+  
+  
+  <div class ="input-field">
+  <input placeholder= "Enter Security Question"type="text" name="question"
+        formControlName="securityQuestion">
+      </div>
+  
+  <div class ="input-field">
+  <input placeholder= "Enter Security Answer"type="tect" name="answer"
+        formControlName="securityAnswer">
+      </div>
+  <br /><br />
+  
+  <div class="action button">
+  <button type="submit" value="Update Profile"
+        [disabled]="!profileForm.valid">UPDATE PROFILE</button>
+      </div>
+  
+  </form>
+  
+  </div>
+  </div>

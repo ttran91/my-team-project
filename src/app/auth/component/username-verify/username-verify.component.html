@@ -1,0 +1,36 @@
+
+<div class="login-form">
+  <h1 class ="h1">Password Reset</h1>
+  
+  <div class = "content">
+  
+    <div class ="input-field">
+    <span *ngIf="error_msg != ''">{{error_msg}} <br /></span>
+    <input placeholder="ENTER USERNAME:" type="text" [(ngModel)]="username">
+    <div class="action button">
+    <button (click)="onSubmit()"
+        [disabled]="!status">VERIFY</button>
+      </div>
+      </div>
+  
+  
+  
+  <br /> <br />
+  <div *ngIf="showSecurityBox">
+    
+    <div class ="input-field">
+      <label>
+        Security Question: {{dto?.securityQuestion}}
+      </label>
+    
+      <br /><br />
+      <input placeholder = "ENTER ANSWER" type="text" [(ngModel)]="answer">
+      <div class="action button">
+      <button (click)="onQuestionSubmit()"> Submit Answer</button>
+    </div>
+    </div>
+    
+  </div>
+  
+  </div>
+  </div>

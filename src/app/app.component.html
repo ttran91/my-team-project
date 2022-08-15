@@ -1,11 +1,24 @@
 <div class="navbar">
-    <span>
-    <a routerLink="Home">Home</a> &nbsp;&nbsp;&nbsp;
-    <a routerLink="PlaceOrder">Place an Order</a> &nbsp;&nbsp;&nbsp;
-    <a routerLink="ViewOrder">View an Order</a> &nbsp;&nbsp;&nbsp;
-    <a routerLink="ViewAccountdetails">View Account Details</a> &nbsp;&nbsp;&nbsp;
-    <a routerLink="AddBalance">Add Balance to Account</a> &nbsp;&nbsp;&nbsp;
-    </span>
-    <div>
-      <router-outlet></router-outlet>
-    </div>
+  <span>
+  <a routerLink="Dashboard">Home</a> &nbsp;&nbsp;&nbsp;
+  <a routerLink="ShowFood">Show Food Menu</a>&nbsp;&nbsp;&nbsp;
+<!-- <a routerLink="Signup">Sign-Up</a>&nbsp;&nbsp;&nbsp;-->
+  <a routerLink="login">Login</a>&nbsp;&nbsp;&nbsp;
+<!--<a routerLink="PlaceOrder">Place an Order</a> &nbsp;&nbsp;&nbsp;-->  
+  <a routerLink="ViewOrder">View an Order</a> &nbsp;&nbsp;&nbsp;
+  <a routerLink="ViewAccountDetails">View Account Details</a> &nbsp;&nbsp;&nbsp;
+<!-- <a routerLink="AddBalance">Add Balance to Account</a> &nbsp;&nbsp;&nbsp;-->  
+  </span>
+  <span *ngIf="username != '' ">
+    Welcome {{username}}  &nbsp;&nbsp;&nbsp;
+    <a routerLink="/profile">Profile</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/logout">Logout</a>
+  </span>
+
+
+    <hr>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
