@@ -1,6 +1,6 @@
 export class Food{
-    idFood: number;
-    foodName: string;
+    id: number;
+    name: string;
     foodCategory: string;
     foodPrice:number;
     vendorName: string;

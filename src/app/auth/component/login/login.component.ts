@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('username',this.user.username);
             localStorage.setItem('credentials', btoa(this.username + ':' + this.password));
             this.authService.username$.next(this.user.username);
-            this.router.navigateByUrl('/dashboard');
+            this.router.navigateByUrl('/Dashboard');
       },
       error: (e)=> {
         this.authService.message$.next("Invalid Credentials");

@@ -1,14 +1,23 @@
-<div class="navbar">
-  <span>
-  <a routerLink="Dashboard">Home</a> &nbsp;&nbsp;&nbsp;
-  <a routerLink="ShowFood">Show Food Menu</a>&nbsp;&nbsp;&nbsp;
-<!-- <a routerLink="Signup">Sign-Up</a>&nbsp;&nbsp;&nbsp;-->
-  <a routerLink="login">Login</a>&nbsp;&nbsp;&nbsp;
-  <a routerLink="PlaceOrder">Place an Order</a> &nbsp;&nbsp;&nbsp;
-  <a routerLink="ViewOrder">View an Order</a> &nbsp;&nbsp;&nbsp;
-  <a routerLink="ViewAccountDetails">View Account Details</a> &nbsp;&nbsp;&nbsp;
-  <a routerLink="AddBalance">Add Balance to Account</a> &nbsp;&nbsp;&nbsp;
-  </span>
+<h1>Hello Welcome to the Food Court</h1>
+<div class="topnav">
+    <a class="active" routerLink="Dashboard"> Home</a>
+    <!--<a routerLink="Dashboard">Home</a> &nbsp;&nbsp;&nbsp;-->
+    <a routerLink="ShowFood">Show Food Menu</a>&nbsp;&nbsp;&nbsp;
+  <!-- <a routerLink="Signup">Sign-Up</a>&nbsp;&nbsp;&nbsp;-->
+    <a routerLink="login">Login</a>&nbsp;&nbsp;&nbsp;
+    <!--<a routerLink="PlaceOrder">Place an Order</a> &nbsp;&nbsp;&nbsp;-->
+    <a routerLink="ViewOrder">View an Order</a> &nbsp;&nbsp;&nbsp;
+    <a routerLink="ViewAccountDetails">Edit Account Details</a> &nbsp;&nbsp;&nbsp;
+   <!-- <a routerLink="AddBalance">Add Balance to Account</a> &nbsp;&nbsp;&nbsp;-->
+   <!--<div class="login-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="psw">
+      <button type="submit">Login</button>
+    </form>
+  </div>-->
+  </div> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <span *ngIf="username != '' ">
     Welcome {{username}}  &nbsp;&nbsp;&nbsp;
     <a routerLink="/profile">Profile</a>
@@ -18,7 +27,7 @@
 
 
     <hr>
-  </div>
   <div>
     <router-outlet></router-outlet>
   </div>
+ 

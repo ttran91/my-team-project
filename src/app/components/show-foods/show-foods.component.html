@@ -1,7 +1,12 @@
 <h1>Food Menu</h1>
 <h3 *ngIf="!(errorMsg == '')">{{errorMsg}}</h3>
 
-<div *ngFor="let f of food">
-    {{f.idFood}}&nbsp;{{f.foodName}}&nbsp;{{f.foodCategory}}&nbsp;{{f.foodPrice}}&nbsp;{{f.vendorName}}<br />
 
+<div *ngFor="let f of food" class="card">
+  <strong>FoodID:{{f.id}}</strong>
+  <h2>Food Name:{{f.name}}&nbsp;&nbsp;</h2><br />
+  <strong>Category: {{f.foodCategory}}&nbsp;&nbsp;</strong><br />
+  <strong>Price: {{f.foodPrice}}&nbsp;&nbsp;</strong><br />
+  <strong>{{f.vendorName}}&nbsp;&nbsp;</strong>
+  <a routerlink><button>Add to Cart</button></a>
 </div>
