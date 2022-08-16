@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { OrderFormEditDto } from '../model/OrderFormEdit';
 import { OrderService } from '../service/order.service';
 
@@ -9,49 +10,48 @@ import { OrderService } from '../service/order.service';
   styleUrls: ['./order-edit.component.css']
 })
 export class OrderEditComponent implements OnInit {
+msg: string;
+orderFormEditDto: OrderFormEditDto;
+orderFormEdits: FormGroup;
+cName: string;
+orderStatus: string;
+orderCost: string;
+cPnumber: number;
 
-  info: string;
-  orderFormEditDto: OrderFormEditDto;
-  orderEditForm: FormGroup;
-  msg: string;
 
 
-  constructor(private orderService: OrderService) { }
+
+  constructor(private orderService: OrderService, private router: ActivatedRoute) { }
 
   ngOnInit(): void {
+    console.log(this.router.snapshot.params['id']);
     this.msg='';
-    this.orderEditForm = new FormGroup({
-      cName: new FormControl(''),
-      orderStatus: new FormControl(''),
-      orderCost: new FormControl(''),
-      cPnumber: new FormControl('')
-    });
-}
+    this.orderService.getOrderFormById(this.router.snapshot.params['id'])
+    .subscribe ((data)=> {
+      console.log(data);
+      this.orderFormEdits = new FormGroup({
+        cName: new FormControl(data['cName']),
+        orderStatus: new FormControl(data['orderStatus']),
+        orderCost: new FormControl(data['orderCost']),
+        cPnumber: new FormControl(data['cPnumber'])
+      });
 
-  onFormSubmit(){
-    this.orderFormEditDto={
-      cName: this.orderEditForm.value.cName,
-      orderStatus: this.orderEditForm.value.orderStatus,
-      orderCost: this.orderEditForm.value.orderCost,
-      cPnumber: this.orderEditForm.value.cPnumber
+      
+    })
 
-
-    };
-    this.orderService.editForm(this.info).subscribe({
-      next: (data)=> {
-        this.msg="Order Updated!!!";
-        this.orderEditForm.controls['cName'].setValue(this.orderFormEditDto.cName);
-        this.orderEditForm.controls['orderStatus'].setValue(this.orderFormEditDto.orderStatus);
-        this.orderEditForm.controls['orderCost'].setValue(this.orderFormEditDto.orderCost);
-        this.orderEditForm.controls['cPnumber'].setValue(this.orderFormEditDto.cPnumber);
-        
-
-
-      },
-      error: (e)=> {
-        this.msg="OrderEdit Operation Failed";
-      }
-    });
   }
 
+
+
+
+
+
+  onorderFormEdit() {
+  this.orderService.updateOrderFromById(this.router.snapshot.params['id']
+  ,this.orderFormEdits.value)
+  .subscribe ((data)=> {
+    console.log(data,"data updated successfully")
+    this.msg='Data updated successfully'
+  })
+}
 }

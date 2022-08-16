@@ -15,13 +15,14 @@ export class OrderService {
   getAllApi: string;
   deleteApi: string;
   getStatsApi: string;
-
+  getOrderFormByIdApi: string;
+  editApi: string;
 
   orderForm$ = new BehaviorSubject<OrderForm[]>([]);
   orderStat$ = new BehaviorSubject<any>(0);
   page$ = new BehaviorSubject<number>(0);
   stat$ = new BehaviorSubject<Boolean>(false);
-  putformEditApi: string;
+
 
 
 
@@ -30,7 +31,8 @@ export class OrderService {
     this.getAllApi=environment.serverUrl+'/orderForm';
     this.deleteApi=environment.serverUrl+'/orderForm/';
     this.getStatsApi=environment.serverUrl+'/orderForm/stats';
-    this.putformEditApi=environment.serverUrl+'/orderForm/edit/';
+    this.getOrderFormByIdApi='http://localhost:8173/orderForm/single/';
+    this.editApi='http://localhost:8173/orderForm/edit';
 
 
   
@@ -41,7 +43,8 @@ export class OrderService {
    }
 
    getAllOrderForm(page: number,size: number) : Observable<OrderForm[]>{
-    return this.http.get<OrderForm[]>(this.getAllApi + '?page='+page+'&size='+size);
+    return this.http.get<OrderForm[]>
+                            (this.getAllApi + '?page='+page+'&size='+size);
    }
 
    deleteOrderForm(oid: number): Observable<any> {
@@ -54,16 +57,14 @@ export class OrderService {
 
    }
 
-   editForm(info: string) :Observable<OrderFormEditDto>{
-    let httpOptions={
-      headers : new HttpHeaders({
-        'Content-type' : 'application/json',
-        'Authorization' : 'basic' + info
+   getOrderFormById(id: number) : Observable<OrderFormEditDto> {
+    return this.http.get<OrderFormEditDto>(this.getOrderFormByIdApi + id);
+  }
+  updateOrderFromById(id, data) : Observable<OrderFormEditDto>{ 
+    return this.http.put<OrderFormEditDto>(`${this.editApi}/${id}`, data);
+  }
 
-      })
-    };
-    return this.http.put<OrderFormEditDto>(this.putformEditApi,OrderFormEditDto,httpOptions);
+
    }
 
 
-}
