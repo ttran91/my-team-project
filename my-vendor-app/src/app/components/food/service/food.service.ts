@@ -21,9 +21,10 @@ export class FoodService {
 
   constructor(private http: HttpClient) {
 
-    this.postApi='http://localhost:8173/food/';
+    this.postApi='http://localhost:8173/food/23';
     this.getAllApi='http://localhost:8173/food';
     this.getStatsApi='http://localhost:8173/food/stats';
+    this.deleteApi='http://localhost:8173/food/'
 
 
    }

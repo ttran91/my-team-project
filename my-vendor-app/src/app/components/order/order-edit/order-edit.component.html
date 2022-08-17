@@ -11,42 +11,22 @@
   
     <div class ="input-field">
     <input placeholder="ENTER CUSTOMER Name"type="text" name="cName" formControlName="cName">
-    <span *ngIf="orderFormEdits.controls['cName'].invalid
-          && orderFormEdits.controls['cName'].touched">
-      <span *ngIf="orderFormEdits.controls['cName'].errors['required']"> Name is Required</span>
-      <span *ngIf="orderFormEdits.controls['cName'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
-    </span>
+
   </div>
   
     <div class ="input-field">
     <input placeholder = "ENTER ORDER STATUS" type="text" name="orderStatus" formControlName="orderStatus">
-    <span *ngIf="orderFormEdits.controls['orderStatus'].invalid
-          && orderFormEdits.controls['orderStatus'].touched">
-      <span *ngIf="orderFormEdits.controls['orderStatus'].errors['required']"> Category is Required</span>
-      <span *ngIf="orderFormEdits.controls['orderStatus'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
-    </span>
+
   
   </div>
     <div class ="input-field">
     <input placeholder = "ENTER ORDER COST" type="text" name="orderCost" formControlName="orderCost">
-    <span *ngIf="orderFormEdits.controls['orderCost'].invalid
-    && orderFormEdits.controls['orderCost'].touched">
-      <span *ngIf="orderFormEdits.controls['orderCost'].errors['required']"> Price is Required</span>
-      <span *ngIf="orderFormEdits.controls['orderCost'].errors['minlength']"> Minlength is 1</span>
-      <span *ngIf="orderFormEdits.controls['orderCost'].errors['maxlength']"> Max Length is 10</span>
-      <span *ngIf="orderFormEdits.controls['orderCost'].errors['pattern']"> Pattern allowed: 999.99</span>
-    </span>
+
   </div>
 
   <div class ="input-field">
     <input placeholder = "ENTER CUSTOMER NUMBER" type="text" name="cPnumber" formControlName="cPnumber">
-    <span *ngIf="orderFormEdits.controls['cPnumber'].invalid
-    && orderFormEdits.controls['cPnumber'].touched">
-      <span *ngIf="orderFormEdits.controls['cPnumber'].errors['required']"> Price is Required</span>
-      <span *ngIf="orderFormEdits.controls['cPnumber'].errors['minlength']"> Minlength is 1</span>
-      <span *ngIf="orderFormEdits.controls['cPnumber'].errors['maxlength']"> Max Length is 10</span>
-      <span *ngIf="orderFormEdits.controls['cPnumber'].errors['pattern']"> Pattern allowed: 999.99</span>
-    </span>
+
   </div>
     <br /><br />
   

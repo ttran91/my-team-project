@@ -26,12 +26,12 @@ export class AuthService {
 
   constructor(private http: HttpClient) {
     this.username='';
-    this.loginApi = 'http://localhost:8122/login';
-    this.signUpApi='http://localhost:8122/user';
-    //this.vendorSignUpApi='http://localhost:8122/vendor';
-    this.userAPi = 'http://localhost:8122/user/username';
-    this.profileEditAPi='http://localhost:8122/user/profile';
-    this.userSecurityInfoApi='http://localhost:8122/user/security/info/';
+    this.loginApi = 'http://localhost:8173/login';
+    this.signUpApi='http://localhost:8173/user';
+    //this.vendorSignUpApi='http://localhost:8173/vendor';
+    this.userAPi = 'http://localhost:8173/user/username';
+    this.profileEditAPi='http://localhost:8173/user/profile';
+    this.userSecurityInfoApi='http://localhost:8173/user/security/info/';
     this.securityAnswerValidationApi=environment.serverUrl + '/validate-security-answer/'
     this.passwordResetAPi=environment.serverUrl +'/user/reset-password/';
   }

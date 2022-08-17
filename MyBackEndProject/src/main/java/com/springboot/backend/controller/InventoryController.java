@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.springboot.backend.dto.InventoryDto;
 import com.springboot.backend.dto.InventoryEditDto;
 import com.springboot.backend.dto.UserDto;
 import com.springboot.backend.model.Food;
 import com.springboot.backend.model.Inventory;
+import com.springboot.backend.model.Order;
 import com.springboot.backend.model.UserInfo;
 import com.springboot.backend.model.Vendor;
 import com.springboot.backend.repository.FoodRepository;
@@ -39,6 +40,12 @@ public class InventoryController {
 		List<Inventory> list = inventoryRepository.findAll();
 		return list;
 	}
+	
+	@PostMapping("/inventory")
+	public Inventory postEmployee(@RequestBody Inventory inventory) {
+		return inventoryRepository.save(inventory);
+	}
+	
 
 	@PostMapping("/inventory/{fid}/{vid}")
 	public Inventory postInventory(@RequestBody Inventory inventory, @PathVariable("fid") Long fid,

@@ -1,6 +1,7 @@
 package com.springboot.backend.controller;
 
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +21,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.springboot.backend.dto.OrderFormDto;
+import com.springboot.backend.dto.OrderFormEditDto;
 import com.springboot.backend.model.Customer;
+import com.springboot.backend.model.Inventory;
+import com.springboot.backend.model.Order;
 import com.springboot.backend.model.OrderForm;
 import com.springboot.backend.repository.CustomerRepository;
 import com.springboot.backend.repository.OrderFormRepository;
@@ -47,16 +51,15 @@ public class OrderFormController {
 	
 	@GetMapping("/orderForm")
 	public List<OrderForm> getAllOrderFormData(
-					@RequestParam("page") Integer page,
-					@RequestParam("size") Integer size){
+			  @RequestParam(name = "page", required = false, defaultValue = "0") Integer page, //to bypass pagination
+			   @RequestParam(name = "size", required = false, defaultValue = "10000") Integer size){
+				
+				
 			
-		Pageable pageable=PageRequest.of(page, size);
-		
-		return orderFormRepository.findAll(pageable).getContent();
-
-		
-		
-	}
+			Pageable pageable=PageRequest.of(page, size);
+			
+			return orderFormRepository.findAll(pageable).getContent();
+		}
 	
 	
 	@GetMapping("/orderForm/stats")
@@ -85,22 +88,43 @@ public class OrderFormController {
 		
 	}
 	
-	@PutMapping("/orderForm/edit/{id}")
-	public OrderForm orderEdit(@PathVariable("id") Long id, @RequestBody OrderForm newOrderForm) {
-		
+	@GetMapping("/orderForm/single/{id}")
+	public OrderForm getOrderFormById(@PathVariable("id") Long id) {
 		Optional<OrderForm> optional = orderFormRepository.findById(id);
-		if (optional.isPresent()) {
-			OrderForm currentOrderForm = optional.get();
-			currentOrderForm.setcName(newOrderForm.getcName());
-			currentOrderForm.setOrderStatus(newOrderForm.getOrderStatus());
-			currentOrderForm.setOrderCost(newOrderForm.getOrderCost());
-			currentOrderForm.setcPnumber(newOrderForm.getcPnumber());
-			
-			return orderFormRepository.save(currentOrderForm);
-			
-		}
-		throw new RuntimeException("ID is Invalid");
+		if(optional.isPresent())
+			return optional.get();
+		throw new RuntimeException("ID in invalid");
 	}
+	
+	
+	@PutMapping("/orderForm/edit/{id}")
+	public OrderForm orderFormEdit(@PathVariable long id, @RequestBody OrderFormEditDto newForm) {
+		Optional<OrderForm> optional = orderFormRepository.findById(id);
+		
+		if(optional.isPresent()) {
+		 
+		OrderForm existingof = optional.get();
+		existingof.setcName(newForm.getcName());
+		existingof.setOrderStatus(newForm.getOrderStatus());
+		existingof.setOrderCost(newForm.getOrderCost());
+		existingof.setcPnumber(newForm.getcPnumber());
+		
+		return orderFormRepository.save(existingof);
+		
+		
+		
+		
+		}
+		else
+			throw new RuntimeException("ID is inavlid");
+		
+	}
+	
+	
+
+	
+
+	
 	
 	
 	

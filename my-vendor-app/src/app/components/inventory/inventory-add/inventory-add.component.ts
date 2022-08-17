@@ -40,7 +40,7 @@ export class InventoryAddComponent implements OnInit, OnDestroy {
       this.inventoryService.postInventoryForm(this.inventory).subscribe({
         next: (data)=>{
           this.inventory = data;
-          this.msg="Order is added in the system";
+          this.msg="Inventory is added in the system";
           let inventoryArry = this.inventoryService.inventory$.getValue();
           inventoryArry.push(this.inventory);
           this.inventoryService.inventory$.next(inventoryArry);
