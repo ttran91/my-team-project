@@ -7,6 +7,7 @@ import { PasswordResetComponent } from './auth/component/password-reset/password
 import { ProfileComponent } from './auth/component/profile/profile.component';
 import { SignUpComponent } from './auth/component/sign-up/sign-up.component';
 import { UsernameVerifyComponent } from './auth/component/username-verify/username-verify.component';
+import { VendorSignupComponent } from './auth/component/vendor-signup/vendor-signup.component';
 import { AuthguardService } from './auth/service/authguard.service';
 import { FoodComponent } from './components/food/food/food.component';
 import { InventoryAddComponent } from './components/inventory/inventory-add/inventory-add.component';
@@ -20,10 +21,9 @@ import { OrderComponent } from './components/order/order/order.component';
 
 const routes: Routes = [
 
-  {path: '' , component: OrderComponent,
-              canActivate:[AuthguardService]},
+  {path: '' , component: LoginComponent},
   {path:  'order', component: OrderComponent,
-               canActivate:[AuthguardService]},
+                    canActivate:[AuthguardService]},
   {path:'login' ,component: LoginComponent},
 
   {path: 'food' , component: FoodComponent,

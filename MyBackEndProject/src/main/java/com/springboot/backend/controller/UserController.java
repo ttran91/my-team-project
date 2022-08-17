@@ -4,10 +4,12 @@ import java.security.Principal;
 import java.time.LocalDate;
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -99,6 +101,11 @@ public class UserController {
 		dto.setAccountType(info.getAccountType());
 		return dto; 
 	}
+	
+	@GetMapping("/user/{id}")
+	public Optional<UserInfo> getUserById(@PathVariable("id") Long id){
+        return userRepository.findById(id);
+    }
 	
 	@GetMapping("/user/username")
 	public UserEditDto getUserByUsername(Principal principal) {

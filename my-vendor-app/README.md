@@ -16,9 +16,11 @@ Tran
 (DONE) food-add <br />
 (DONE) food-stat <br />
 
-food-delete <br />
-food.model <br />
-food.service <br />
+(DONE) food-delete <br />
+(DONE) food.model <br />
+(DONE) food.service <br />
+
+(DONE) navbar css <br />
 
 
 Umair
@@ -30,3 +32,6 @@ order-stat <br />
 order.service <br />
 order.model <br />
 order-delete <br />
+
+inventory
+

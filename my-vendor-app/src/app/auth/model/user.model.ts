@@ -7,6 +7,7 @@ export class User{
   }
 
   export class UserDto{
+    id?: number;
     name: string;
     encodedCredentials: string;
     accountType: string;
@@ -27,4 +28,12 @@ export class User{
     name: string;
     securityQuestion: string;
     username?: string;
+  }
+
+  export class UserToVendor{
+    id?: number;
+    name: string;
+    vid?: number;
+    vEmail: string;
+    vPhoneNumber: string;
   }

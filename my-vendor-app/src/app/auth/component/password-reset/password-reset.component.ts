@@ -13,6 +13,7 @@ export class PasswordResetComponent implements OnInit{
   password: string;
   repassword:string;
   error_msg: string;
+  
   constructor(private authService: AuthService,private router:Router) { }
   username: string;
   ngOnInit(): void {

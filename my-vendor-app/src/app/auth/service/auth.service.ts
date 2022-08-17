@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { User, UserDto, UserEditDto, UserSecurityDto } from '../model/user.model';
+import { User, UserDto, UserEditDto, UserSecurityDto, UserToVendor } from '../model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,7 @@ export class AuthService {
 
   
   username: string;
+  id: number;
   username$ = new BehaviorSubject<string>('');
   user$ = new BehaviorSubject<string>('');
   message$ = new BehaviorSubject<string>('');
@@ -21,14 +22,16 @@ export class AuthService {
   userSecurityInfoApi: string;
   securityAnswerValidationApi:string;
   passwordResetAPi: string;
+  vendorSignUpApi: string;
 
   constructor(private http: HttpClient) {
     this.username='';
-    this.loginApi = 'http://localhost:8173/login';
-    this.signUpApi='http://localhost:8173/user';
-    this.userAPi = 'http://localhost:8173/user/username';
-    this.profileEditAPi='http://localhost:8173/user/profile';
-    this.userSecurityInfoApi='http://localhost:8173/user/security/info/';
+    this.loginApi = 'http://localhost:8122/login';
+    this.signUpApi='http://localhost:8122/user';
+    //this.vendorSignUpApi='http://localhost:8122/vendor';
+    this.userAPi = 'http://localhost:8122/user/username';
+    this.profileEditAPi='http://localhost:8122/user/profile';
+    this.userSecurityInfoApi='http://localhost:8122/user/security/info/';
     this.securityAnswerValidationApi=environment.serverUrl + '/validate-security-answer/'
     this.passwordResetAPi=environment.serverUrl +'/user/reset-password/';
   }
@@ -61,6 +64,10 @@ export class AuthService {
   signUp(userDto: UserDto):Observable<any> {
         return this.http.post(this.signUpApi, userDto);
   }
+
+  //vendorSignUpByUserId(userToVendor:UserToVendor) :Observable<any>{
+  //  return this.http.post(this.vendorSignUpApi, userToVendor);
+ //}
 
   getUserByUsername(credentials: string) : Observable<UserEditDto>{
     let httpOptions={
