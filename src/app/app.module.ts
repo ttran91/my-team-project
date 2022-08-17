@@ -17,6 +17,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignUpComponent } from './auth/component/sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UsernameVerifyComponent,
     ShowFoodsComponent,
     DashboardComponent,
-    SignUpComponent
+    SignUpComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
