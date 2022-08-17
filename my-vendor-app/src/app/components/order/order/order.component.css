@@ -1,17 +1,14 @@
 .order-section{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 10px;
-    margin: 10px;
-  }
+  font-family: 'Rubik', sans-serif;
+  padding: 10px;
+  margin: 10px;
+}
   .order-list{
-    width: 50%;
+    width: 55%;
+    height:50%;
     float: left;
   }
-  .order-stat{
-    width: 50%;
-    float:left;
-  }
   .order-add{
-    width: 50%;
+    width: 30%;
     float:left;
   }

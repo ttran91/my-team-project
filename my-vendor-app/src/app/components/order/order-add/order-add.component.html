@@ -1,37 +1,59 @@
+<div class="login-form">
+
+  <div class = "content">
 <span *ngIf="!(msg =='')">
   {{msg}}
-  </span>
+</span>
+
 
 <form (submit)="onFormSubmit()" [formGroup]="orderFormForm">
-    <label>Enter Customer Name: </label>
-    <input type="text" name="cName" formControlName="cName">
-    <span *ngIf="orderFormForm.controls['cName'].invalid
-          && orderFormForm.controls['cName'].touched">
-      <span *ngIf="orderFormForm.controls['cName'].errors['required']"> Customer Name is Required</span>
-      <span *ngIf="orderFormForm.controls['cName'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
-    </span>
-    <br /><br />
-    <label>Enter Order Status: </label>
-    <input type="text" name="orderStatus" formControlName="orderStatus">
-    <span *ngIf="orderFormForm.controls['orderStatus'].invalid
-          && orderFormForm.controls['orderStatus'].touched">
-      <span *ngIf="orderFormForm.controls['orderStatus'].errors['required']"> Order Status is Required</span>
-      <span *ngIf="orderFormForm.controls['orderStatus'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
-    </span>
-    <br /><br />
-    <label>Enter Order Cost: </label>
-    <input type="text" name="orderCost" formControlName="orderCost">
-    <span *ngIf="orderFormForm.controls['orderCost'].invalid && orderFormForm.controls['orderCost'].touched">
-      <span *ngIf="orderFormForm.controls['orderCost'].errors['required']"> cost is Required</span>
-    </span>
-    <br /><br />
-    <label>Enter Customer Phone </label>
-    <input type="text" name="cPnumber" formControlName="cPnumber">
+  
+
+  <div class ="input-field">
+  <input placeholder="ENTER Customer NAME"type="text" name="cName" formControlName="cName">
+  <span *ngIf="orderFormForm.controls['cName'].invalid
+        && orderFormForm.controls['cName'].touched">
+    <span *ngIf="orderFormForm.controls['cName'].errors['required']">Customer Name is Required</span>
+    <span *ngIf="orderFormForm.controls['cName'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
+  </span>
+</div>
+
+  <div class ="input-field">
+  <input placeholder = "ENTER Order Status" type="text" name="orderStatus" formControlName="orderStatus">
+  <span *ngIf="orderFormForm.controls['orderStatus'].invalid
+        && orderFormForm.controls['orderStatus'].touched">
+    <span *ngIf="orderFormForm.controls['orderStatus'].errors['required']"> Order Status is Required</span>
+    <span *ngIf="orderFormForm.controls['orderStatus'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
+  </span>
+
+</div>
+  <div class ="input-field">
+  <input placeholder = "ENTER Order Cost" type="text" name="orderCost" formControlName="orderCost">
+  <span *ngIf="orderFormForm.controls['orderCost'].invalid
+  && orderFormForm.controls['orderCost'].touched">
+    <span *ngIf="orderFormForm.controls['orderCost'].errors['required']"> Cost is Required</span>
+    <span *ngIf="orderFormForm.controls['orderCost'].errors['minlength']"> Minlength is 1</span>
+    <span *ngIf="orderFormForm.controls['orderCost'].errors['maxlength']"> Max Length is 10</span>
+    <span *ngIf="orderFormForm.controls['orderCost'].errors['pattern']"> Pattern allowed: 999.99</span>
+  </span>
+</div>
+
+  <div class ="input-field">
+    <input placeholder = "ENTER Customer Phone Number" type="text" name="cPnumber" formControlName="cPnumber">
     <span *ngIf="orderFormForm.controls['cPnumber'].invalid
-          && orderFormForm.controls['cPnumber'].touched">
-    <span *ngIf="orderFormForm.controls['cPnumber'].errors['pattern']"> Pattern allowed: [0-9 ]+</span>
-    
+    && orderFormForm.controls['cPnumber'].touched">
+      <span *ngIf="orderFormForm.controls['cPnumber'].errors['required']"> Customer Phone number is Required</span>
+      <span *ngIf="orderFormForm.controls['cPnumber'].errors['minlength']"> Minlength is 10</span>
+      <span *ngIf="orderFormForm.controls['cPnumber'].errors['maxlength']"> Max Length is 10</span>
+      <span *ngIf="orderFormForm.controls['cPnumber'].errors['pattern']"> Pattern allowed: 999.99</span>
     </span>
-    <br /><br />
-    <input type="submit" value="Add Order" [disabled]="!orderFormForm.valid">
+  </div>
+
+  <div class="action button">
+    <button type="submit" value="Add Food" [disabled]="!orderFormForm.valid">ADD FOOD</button>
+  </div>
   </form>
+</div>
+</div>
+
+

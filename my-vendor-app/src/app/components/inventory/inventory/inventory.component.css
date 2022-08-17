@@ -1,13 +1,14 @@
 .inventory-section{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 10px;
-    margin: 10px;
-  }
-  .inventory-list{
-    width: 50%;
-    float: left;
-  }
-  .inventory-stat-add{
-    width: 50%;
-    float:left;
-  }
+  font-family: 'Rubik', sans-serif;
+  padding: 10px;
+  margin: 10px;
+}
+.inventory-list{
+  width: 55%;
+  height:50%;
+  float: left;
+}
+.inventory-add{
+  width: 30%;
+  float:left;
+}

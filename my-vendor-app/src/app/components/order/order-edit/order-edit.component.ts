@@ -10,7 +10,7 @@ import { OrderService } from '../service/order.service';
   templateUrl: './order-edit.component.html',
   styleUrls: ['./order-edit.component.css']
 })
-export class OrderEditComponent implements OnInit, OnDestroy {
+export class OrderEditComponent implements OnInit {
 msg: string;
 orderFormEditDto: OrderFormEditDto;
 orderFormEdits: FormGroup;
@@ -56,8 +56,6 @@ subscriptions: Subscription[];
     this.msg='Data updated successfully'
   })
 }
-ngOnDestroy(): void {
-  this.subscriptions.forEach(sub=>sub.unsubscribe());
-}
+
 
 }

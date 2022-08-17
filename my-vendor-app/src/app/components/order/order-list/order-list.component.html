@@ -1,27 +1,42 @@
-<p>Order List</p>
+
+<div class="login-form">
+   <div class="content">
+      <h2>List of Current Orders</h2>
+      <br> <br/>
 <span *ngIf="!(msg =='')">
    {{msg}}
    </span>
+   <br> <br/>
 <div class ="headings">
    <div *ngFor="let o of orderForm">
- 
-    Customer's Name: {{o.cName}}
+     
+   <a href ='javascript::void' (click)="onorderFormDelete(o.id)"><button class="delete">DELETE</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+   <a routerLink="/order-edit/{{o.id}}"><button class="delete">Edit</button></a>&nbsp;&nbsp;&nbsp;
+    Name: <strong>{{o.cName}}</strong>
+    &nbsp;|&nbsp;
     Order Status: {{o.orderStatus}}
+    &nbsp;|&nbsp;
     Order cost: {{o.orderCost}}
-    Customer's #: {{o.cPnumber}}
-    <hr>
-    <a href ='javascript::void' (click)="onorderFormDelete(o.id)">Delete</a>&nbsp;&nbsp;&nbsp;&nbsp;
-    <a routerLink="/order-edit/{{o.id}}">Edit</a>&nbsp;&nbsp;&nbsp;
-
+    &nbsp;|&nbsp;
+    
+    <pre class="tab">                   Customer #: {{o.cPnumber}}</pre>
+    
+    
     <hr>
    </div>
+   <br /><br />
+   <div>
 
-   <div class="buttons">
-      <a href="Javascript:void" (click)="prev()">Prev </a> &nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="Javascript:void" (click)="next()">Next </a> &nbsp;&nbsp;&nbsp;&nbsp;
+   <div class="action button">
+      <div class="action button"></div>
+      <a href="Javascript:void" (click)="prev()"><button>PREV</button></a>  
+       &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="Javascript:void" (click)="next()"><button>PREV</button></a> 
+       &nbsp;&nbsp;&nbsp;&nbsp;
 
 
    </div>
 
+</div>
 </div>
 

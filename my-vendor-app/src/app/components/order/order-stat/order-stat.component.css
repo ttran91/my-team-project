@@ -1,6 +1,6 @@
 .estat{
 
-    border: 2px solid;
+  border: 6px;
   
   }
   
@@ -14,6 +14,7 @@
   
   .count{
     font-size: xx-large;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: right;
+    font-family: 'Rubik', sans-serif;
+    color:darkred;
+    text-align: center;
   }

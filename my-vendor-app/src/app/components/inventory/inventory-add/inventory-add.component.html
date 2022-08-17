@@ -1,18 +1,34 @@
+<div class="login-form">
 
-
+  <div class = "content">
 <span *ngIf="!(msg =='')">
-    {{msg}}
-  </span>
-  <form (submit)="onFormSubmit()" [formGroup]="inventoryForm">
-    <label>Enter Amouunt In Stock: </label>
-    <input type="text" name="amountInStock" formControlName="amountInStock">
-    <br /><br />
-    <label>Enter Maximum Stock: </label>
-    <input type="text" name="maxStock" formControlName="maxStock">
-    <br /><br />
+  {{msg}}
+</span>
 
-    <label>Enter Out Of Stock EXP: </label>
-    <input type="text" name="outOfStockExp" formControlName="outOfStockExp">
-    <br /><br />
-    <input type="submit" value="Add Employee" [disabled]="!inventoryForm.valid">
+
+<form (submit)="onFormSubmit()" [formGroup]="inventoryForm">
+  
+
+  <div class ="input-field">
+  <input placeholder="ENTER AMOUNT IN Stock"type="text" name="amountInStock" formControlName="amountInStock">
+
+</div>
+
+  <div class ="input-field">
+  <input placeholder = "ENTER MAXIMUM NUMBER OF STOCK" type="text" name="maxStock" formControlName="maxStock">
+
+
+</div>
+
+<div class ="input-field">
+  <input placeholder = "ENTER OUT OF STOCK EXPLANATION" type="text" name="outOfStockExp" formControlName="outOfStockExp">
+
+</div>
+  <br /><br />
+
+  <div class="action button">
+    <button type="submit" value="Add inventory" [disabled]="!inventoryForm.valid">ADD Inventory</button>
+  </div>
   </form>
+</div>
+</div>

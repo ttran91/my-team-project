@@ -1,23 +1,58 @@
-<h1>Profile</h1>
-{{msg}}
+<div class="login-form">
 
-<form *ngIf="orderFormEdits"(submit)="onorderFormEdit()" [formGroup]="orderFormEdits">
+    <div class = "content">
+  <span *ngIf="!(msg =='')">
+    {{msg}}
+  </span>
+  
+  
+  <form (submit)="onorderFormEdit()" [formGroup]="orderFormEdits">
     
-    <label> Customer's Name: </label>
-    <input type="text" name="name" formControlName="cName">
-    <br /> <br />
+  
+    <div class ="input-field">
+    <input placeholder="ENTER CUSTOMER Name"type="text" name="cName" formControlName="cName">
+    <span *ngIf="orderFormEdits.controls['cName'].invalid
+          && orderFormEdits.controls['cName'].touched">
+      <span *ngIf="orderFormEdits.controls['cName'].errors['required']"> Name is Required</span>
+      <span *ngIf="orderFormEdits.controls['cName'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
+    </span>
+  </div>
+  
+    <div class ="input-field">
+    <input placeholder = "ENTER ORDER STATUS" type="text" name="orderStatus" formControlName="orderStatus">
+    <span *ngIf="orderFormEdits.controls['orderStatus'].invalid
+          && orderFormEdits.controls['orderStatus'].touched">
+      <span *ngIf="orderFormEdits.controls['orderStatus'].errors['required']"> Category is Required</span>
+      <span *ngIf="orderFormEdits.controls['orderStatus'].errors['pattern']"> Pattern allowed: [a-zA-Z ]+</span>
+    </span>
+  
+  </div>
+    <div class ="input-field">
+    <input placeholder = "ENTER ORDER COST" type="text" name="orderCost" formControlName="orderCost">
+    <span *ngIf="orderFormEdits.controls['orderCost'].invalid
+    && orderFormEdits.controls['orderCost'].touched">
+      <span *ngIf="orderFormEdits.controls['orderCost'].errors['required']"> Price is Required</span>
+      <span *ngIf="orderFormEdits.controls['orderCost'].errors['minlength']"> Minlength is 1</span>
+      <span *ngIf="orderFormEdits.controls['orderCost'].errors['maxlength']"> Max Length is 10</span>
+      <span *ngIf="orderFormEdits.controls['orderCost'].errors['pattern']"> Pattern allowed: 999.99</span>
+    </span>
+  </div>
 
-    <label> Order Status: </label>
-    <input type="text" name="orderStatus"  formControlName="orderStatus">
-    <br /> <br />
-
-
-    <label> Cost of Order: </label>
-    <input type="text" name="cost"  formControlName="orderCost">
-    <br /> <br />
-
-    <label> Customer's Phone Number </label>
-    <input type="text" name="cPnumber"  formControlName="cPnumber">
-    <br /> <br />
-
-    <input type="submit" value="Order Update" [disabled]="!orderFormEdits.valid">
+  <div class ="input-field">
+    <input placeholder = "ENTER CUSTOMER NUMBER" type="text" name="cPnumber" formControlName="cPnumber">
+    <span *ngIf="orderFormEdits.controls['cPnumber'].invalid
+    && orderFormEdits.controls['cPnumber'].touched">
+      <span *ngIf="orderFormEdits.controls['cPnumber'].errors['required']"> Price is Required</span>
+      <span *ngIf="orderFormEdits.controls['cPnumber'].errors['minlength']"> Minlength is 1</span>
+      <span *ngIf="orderFormEdits.controls['cPnumber'].errors['maxlength']"> Max Length is 10</span>
+      <span *ngIf="orderFormEdits.controls['cPnumber'].errors['pattern']"> Pattern allowed: 999.99</span>
+    </span>
+  </div>
+    <br /><br />
+  
+    <div class="action button">
+      <button type="submit" value="Edit Order" [disabled]="!orderFormEdits.valid">Edit Order</button>
+    </div>
+    </form>
+  </div>
+  </div>

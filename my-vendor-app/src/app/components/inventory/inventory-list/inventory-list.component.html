@@ -1,14 +1,21 @@
+<div class="login-form">
+  <div class="content">
+<h2>SAVE INVENTORY</h2>
 
-
-<h2>Inventory List</h2>
-
-<div *ngFor="let i of inventories">
+<div class= "inventory_box" *ngFor="let i of inventories">
+  
   Amount in Stock: <strong>{{i.amountInStock}}</strong>
-  &nbsp;&nbsp;
-  Max Stock: {{i.maxStock}}
-  &nbsp;&nbsp;
-  Out of Stock: {{i.outOfStockExp}}
-  <hr>
+  &nbsp;|&nbsp;
+  Max Stock: <strong>{{i.maxStock}}</strong>
+  &nbsp;|&nbsp;
+  <pre class="tab">                   Out OF STOCK EXPLANATION: {{i.outOfStockExp}}</pre>
+  
+
+  
+
+
+<hr>
 </div>
 <br /><br />
+
 

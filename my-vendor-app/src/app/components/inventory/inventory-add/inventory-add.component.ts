@@ -15,8 +15,6 @@ export class InventoryAddComponent implements OnInit, OnDestroy {
   inventoryForm: FormGroup;
   inventory: Inventory;
   msg: string;
-  fid: any;
-  vid: any;
   data: any;
   subscriptions: Subscription[]=[];
 
@@ -26,8 +24,6 @@ export class InventoryAddComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.msg='';
     this.inventoryForm = new FormGroup({
-      fid: new FormControl(''),
-      vid: new FormControl(''),
       amountInStock: new FormControl(''),
       maxStock: new FormControl(''),
       dateAdded:new FormControl (''),

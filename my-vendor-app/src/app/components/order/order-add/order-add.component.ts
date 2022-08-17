@@ -24,7 +24,8 @@ export class OrderAddComponent implements OnInit, OnDestroy {
     this.orderFormForm = new FormGroup({
       cName: new FormControl('',[Validators.required,Validators.pattern(/^[a-zA-Z ]+$/)]), 
       orderStatus: new FormControl('',[Validators.required,Validators.pattern(/^[a-zA-Z ]+$/)]), 
-      orderCost: new FormControl('',[Validators.required]),
+      orderCost: new FormControl('', [Validators.required,Validators.minLength(1),
+                                      Validators.maxLength(10),Validators.pattern(/^(0(?!\.00)|[1-9]\d{0,6})\.\d{2}$/)]),
       cPnumber: new FormControl ('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)
                                                                           ,Validators.pattern(/^[0-9]+$/)])
       
