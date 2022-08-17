@@ -25,13 +25,24 @@ Tran
 
 Umair
 -----
-order <br />
-order-list <br />
-order-add <br />
-order-stat <br />
-order.service <br />
-order.model <br />
-order-delete <br />
+(DONE) order <br />
+(DONE) order-list <br />
+(DONE) order-add <br />
+(DONE) order-add <br />
+(DONE) order-stat <br />
+(DONE) order.service <br />
+(DONE) order.model <br />
 
-inventory
+
+
+(DONE) order-list-edit <br />
+(DONE) order-list-delete <br />
+
+
+(DONE) inventory <br />
+(DONE) inventory-list <br />
+(DONE) inventory-add <br />
+
+(DONE) inventory css/HTML
+
 
