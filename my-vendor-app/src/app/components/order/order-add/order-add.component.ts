@@ -43,6 +43,7 @@ export class OrderAddComponent implements OnInit, OnDestroy {
             let orderFormArry = this.orderService.orderForm$.getValue();
             orderFormArry.push(this.orderForm);
             this.orderService.orderForm$.next(orderFormArry);
+            this.orderService.stat$.next(true);
           },
           error: (e)=>{
             this.msg='Operation Unsuccessfull'
