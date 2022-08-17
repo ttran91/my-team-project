@@ -3,25 +3,20 @@
 <!-- <app-food-add-reactive></app-food-add-reactive> -->
 <!-- <app-food-list [data]= "foods"></app-food-list> -->
 
-<nav class="navbar">
-<div class="navbar-container container">
-  <input type="checkbox" name="" id="">
-  <div class="hamburger-lines">
-    <span class="line line1"></span>
-    <span class="line line2"></span>
-    <span class="line line3"></span>
-  </div>
+<h1 class="logo">VENDOR</h1>
 
-<ul class="menu-items">
-    <li><a routerLink="/order">Order</a></li>
-    <li><a routerLink="/login">Login</a></li>
-    <li><a routerLink="/food">Food</a></li>
-    <li><a routerLink="/inventory">Inventory</a></li>
+<div class="topnav">
+
+
+    <a class="active" routerLink="/login">Login</a>
+    <a routerLink="/order">Order</a>
+    <a routerLink="/food">Food</a>
+    <a routerLink="/inventory">Inventory</a>
     
-</ul>
-  <h1 class="logo">VENDOR</h1>
   
-
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <span *ngIf="username != '' ">
     Welcome {{username}}  &nbsp;&nbsp;&nbsp;
     <a routerLink="/profile">Profile</a>
@@ -29,12 +24,13 @@
     <a routerLink="/logout">Logout</a>
   </span>
 
+</div>
 
-
-  </div>
+  <hr>
   <div>
     <router-outlet></router-outlet>
   </div>
-</nav>
+
+
 
   

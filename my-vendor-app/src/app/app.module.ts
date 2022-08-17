@@ -22,6 +22,7 @@ import { OrderAddComponent } from './components/order/order-add/order-add.compon
 import { OrderListComponent } from './components/order/order-list/order-list.component';
 import { OrderStatComponent } from './components/order/order-stat/order-stat.component';
 import { OrderEditComponent } from './components/order/order-edit/order-edit.component';
+import { VendorSignupComponent } from './auth/component/vendor-signup/vendor-signup.component';
 
 
 
@@ -48,7 +49,8 @@ import { OrderEditComponent } from './components/order/order-edit/order-edit.com
     OrderAddComponent,
     OrderListComponent,
     OrderStatComponent,
-    OrderEditComponent
+    OrderEditComponent,
+    VendorSignupComponent
   ],
   
   imports: [

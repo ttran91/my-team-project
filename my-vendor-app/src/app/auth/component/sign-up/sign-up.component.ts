@@ -39,7 +39,7 @@ export class SignUpComponent implements OnInit {
       console.log(this.userDto);
       this.authService.signUp(this.userDto).subscribe({
         next: (data)=> {
-            this.authService.message$.next('SignUp Success, Please Login')
+            this.authService.message$.next('SignUp Success, Please Sign In')
             this.router.navigateByUrl('/login');
         },
         error: (e)=>{
