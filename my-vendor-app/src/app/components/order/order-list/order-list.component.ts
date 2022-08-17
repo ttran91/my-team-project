@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { OrderForm } from '../model/order.model';
 import { OrderService } from '../service/order.service';
 
@@ -7,12 +8,13 @@ import { OrderService } from '../service/order.service';
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.css']
 })
-export class OrderListComponent implements OnInit {
+export class OrderListComponent implements OnInit{
 
    
     orderForm: OrderForm[];
      page: number;
      msg: string;
+     subscriptions: Subscription[];
     
    
 
@@ -45,6 +47,7 @@ export class OrderListComponent implements OnInit {
     next: (data)=> {
       this.msg="Order is deleted from the system";
       this.orderForm = this.orderForm.filter(o=>o.id != oid);
+      this.orderService.stat$.next(true);
 
     },
     error: (e)=>{

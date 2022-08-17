@@ -1,23 +1,23 @@
 <h1>Profile</h1>
 {{msg}}
 
-<form (submit)="onFormSubmit()" [formGroup]="orderEditForm">
+<form *ngIf="orderFormEdits"(submit)="onorderFormEdit()" [formGroup]="orderFormEdits">
     
     <label> Customer's Name: </label>
     <input type="text" name="name" formControlName="cName">
     <br /> <br />
 
     <label> Order Status: </label>
-    <input type="text" name="orderStatus" formControlName="orderStatus">
+    <input type="text" name="orderStatus"  formControlName="orderStatus">
     <br /> <br />
 
 
     <label> Cost of Order: </label>
-    <input type="text" name="cost" formControlName="orderCost">
+    <input type="text" name="cost"  formControlName="orderCost">
     <br /> <br />
 
     <label> Customer's Phone Number </label>
-    <input type="text" name="cPnumber" formControlName="cPnumber">
+    <input type="text" name="cPnumber"  formControlName="cPnumber">
     <br /> <br />
 
-    <input type="submit" value="Order Update" [disabled]="!orderEditForm.valid">
+    <input type="submit" value="Order Update" [disabled]="!orderFormEdits.valid">

@@ -1,0 +1,18 @@
+
+
+<span *ngIf="!(msg =='')">
+    {{msg}}
+  </span>
+  <form (submit)="onFormSubmit()" [formGroup]="inventoryForm">
+    <label>Enter Amouunt In Stock: </label>
+    <input type="text" name="amountInStock" formControlName="amountInStock">
+    <br /><br />
+    <label>Enter Maximum Stock: </label>
+    <input type="text" name="maxStock" formControlName="maxStock">
+    <br /><br />
+
+    <label>Enter Out Of Stock EXP: </label>
+    <input type="text" name="outOfStockExp" formControlName="outOfStockExp">
+    <br /><br />
+    <input type="submit" value="Add Employee" [disabled]="!inventoryForm.valid">
+  </form>
