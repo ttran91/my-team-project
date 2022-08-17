@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { OrderFormEditDto } from '../model/OrderFormEdit';
 import { OrderService } from '../service/order.service';
 
@@ -9,7 +10,7 @@ import { OrderService } from '../service/order.service';
   templateUrl: './order-edit.component.html',
   styleUrls: ['./order-edit.component.css']
 })
-export class OrderEditComponent implements OnInit {
+export class OrderEditComponent implements OnInit, OnDestroy {
 msg: string;
 orderFormEditDto: OrderFormEditDto;
 orderFormEdits: FormGroup;
@@ -17,6 +18,7 @@ cName: string;
 orderStatus: string;
 orderCost: string;
 cPnumber: number;
+subscriptions: Subscription[];
 
 
 
@@ -54,4 +56,8 @@ cPnumber: number;
     this.msg='Data updated successfully'
   })
 }
+ngOnDestroy(): void {
+  this.subscriptions.forEach(sub=>sub.unsubscribe());
+}
+
 }

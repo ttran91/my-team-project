@@ -7,17 +7,13 @@ import { FoodService } from '../service/food.service';
   templateUrl: './food.component.html',
   styleUrls: ['./food.component.css']
 })
-export class FoodComponent implements OnInit, OnDestroy {
+export class FoodComponent implements OnInit{
 
   foods: Food[];
   page: number;
   size:number;
   subscriptions: any;
   constructor(private foodService: FoodService) { }
-  ngOnDestroy(): void {
-    this.subscriptions.forEach(sub=>sub.unsubscribe())
-  }
-
   ngOnInit(): void {
     this.size = 5;
     this.foodService.page$.subscribe(value=>{
@@ -34,6 +30,9 @@ export class FoodComponent implements OnInit, OnDestroy {
     })
 
 
+
+
   }
+
 
 }

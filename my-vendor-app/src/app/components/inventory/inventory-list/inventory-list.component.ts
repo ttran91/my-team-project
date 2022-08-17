@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Inventory } from '../model/inventory.model';
 import { InventoryService } from '../service/inventory.service';
 
@@ -11,6 +12,7 @@ export class InventoryListComponent implements OnInit {
 
   inventories: Inventory[];
   page: number;
+  
 
   constructor(private inventoryService: InventoryService) { }
 
@@ -38,6 +40,8 @@ export class InventoryListComponent implements OnInit {
     //attach the updated value to the subject
     this.inventoryService.page$.next(this.page);
 }
+
+
   }
 
 

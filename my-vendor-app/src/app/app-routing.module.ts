@@ -20,8 +20,10 @@ import { OrderComponent } from './components/order/order/order.component';
 
 const routes: Routes = [
 
-  {path: '' , component: OrderComponent},
-  {path:  'order', component: OrderComponent},
+  {path: '' , component: OrderComponent,
+              canActivate:[AuthguardService]},
+  {path:  'order', component: OrderComponent,
+               canActivate:[AuthguardService]},
   {path:'login' ,component: LoginComponent},
 
   {path: 'food' , component: FoodComponent,
