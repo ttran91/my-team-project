@@ -1,5 +1,5 @@
 export class Inventory{
-    id: object;
+    id?: number;
     amountInStock: number;
     maxStock: string;
     dateAdded: any;

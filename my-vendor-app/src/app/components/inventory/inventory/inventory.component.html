@@ -1,16 +1,9 @@
-<h1>Inventory</h1>
-<h3 *ngIf="!(errorMsg == '')">{{errorMsg}}</h3>
+<div class="inventory-section">
+  <div class="inventory-list">
+    <app-inventory-list></app-inventory-list>
+  </div>
 
-<div *ngFor="let i of inventory">
-  Inventory ID: {{i.id}}
-  &nbsp;&nbsp;
-  Quantity: {{i.amountInStock}}
-  &nbsp;&nbsp;
-  Max Quantity: {{i.maxStock}}
-  &nbsp;&nbsp;
-  Date: {{i.dateAdded}} 
-  &nbsp;&nbsp;
-  Note: {{i.outOfStockExp}}
-
-  <hr>
+  <div class="inventory-add">
+    <app-inventory-add></app-inventory-add>
+  </div>
 </div>

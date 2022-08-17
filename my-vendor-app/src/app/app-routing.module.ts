@@ -9,6 +9,8 @@ import { SignUpComponent } from './auth/component/sign-up/sign-up.component';
 import { UsernameVerifyComponent } from './auth/component/username-verify/username-verify.component';
 import { AuthguardService } from './auth/service/authguard.service';
 import { FoodComponent } from './components/food/food/food.component';
+import { InventoryAddComponent } from './components/inventory/inventory-add/inventory-add.component';
+import { InventoryListComponent } from './components/inventory/inventory-list/inventory-list.component';
 import { InventoryComponent } from './components/inventory/inventory/inventory.component';
 import { OrderAddComponent } from './components/order/order-add/order-add.component';
 import { OrderEditComponent } from './components/order/order-edit/order-edit.component';
@@ -26,6 +28,8 @@ const routes: Routes = [
                     canActivate:[AuthguardService]},
   {path: 'inventory' , component: InventoryComponent,
                     canActivate:[AuthguardService]},
+  {path:'inventory-add' ,component: InventoryAddComponent},  
+  {path:'inventory-list' ,component: InventoryListComponent},                 
   {path:'logout' ,component: LogoutComponent},
   {path:'sign-up' ,component: SignUpComponent},
   {path:'profile' ,component: ProfileComponent,
